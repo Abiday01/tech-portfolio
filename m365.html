@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>welcome to my tech space</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">Tech Space</a>
+
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <section class="project-container">
+
+    <h1 class="project-title">Microsoft Entra ID & Microsoft 365 Role-Based Access Control</h1>
+
+    <p class="project-intro">
+      While exploring the Microsoft 365 Admin Center, I discovered the Security Reader role, which led me to build a
+      hands-on lab in Microsoft Entra ID. This project demonstrates how role-based access control (RBAC), least
+      privilege, and monitoring work together in a real-world identity environment.
+    </p>
+
+  </section>
+
+  <section class="project-section">
+
+    <h2>Role Design & Setup</h2>
+
+    <p>
+      I created four users with defined responsibilities to simulate a real IT environment.
+      Each role was assigned only the permissions required to perform their job.
+    </p>
+
+    <div class="role-grid">
+
+      <div class="role-card">
+        <h4>Administrator</h4>
+        <p>Manages users, roles, and access configuration.</p>
+      </div>
+
+      <div class="role-card">
+        <h4>Helpdesk Technician</h4>
+        <p>Handles password resets and user support.</p>
+      </div>
+
+      <div class="role-card">
+        <h4>Security Analyst</h4>
+        <p>Monitors sign-in activity and investigates events.</p>
+      </div>
+
+      <div class="role-card">
+        <h4>End User</h4>
+        <p>Standard account with limited access.</p>
+      </div>
+
+    </div>
+
+    <div class="lab-gallery">
+      <img src="./EntraID photo/1.jpg">
+      <img src="./EntraID photo/1.1.jpg">
+    </div>
+    <p>I started by creating all the users through the Microsoft 365 Admin Center, requiring them to set a password
+      when they first log in.</p>
+
+  </section>
+
+  <section class="project-section">
+
+    <h2>Least Privilege in Practice</h2>
+
+    <p>
+      Each role was restricted to only the permissions required, reinforcing the principle of least privilege.
+    </p>
+
+    <ul class="bullet-list">
+      <li>Helpdesk (Jordan) can reset passwords but cannot assign roles</li>
+      <li>Security Analyst (Amelia) can view logs but cannot modify users</li>
+      <li>End User (Sofia) can only access their own account</li>
+    </ul>
+
+
+    <div class="lab-gallery">
+      <img src="./EntraID photo/2.jpg">
+      <img src="./EntraID photo/3.jpg">
+      <img src="./EntraID photo/4.jpg">
+      <img src="./EntraID photo/5.jpg">
+    </div>
+    <p>
+      Through Entra ID, I created departmental groups using dynamic membership, allowing users to be automatically
+      assigned based on their departments.
+    </p>
+
+
+  </section>
+
+  <section class="project-section">
+
+    <h2>Simulated Support Scenario</h2>
+
+    <div class="scenario-box">
+
+      <p>Sofia enters an incorrect password multiple times</p>
+      <p>↓</p>
+      <p>Sofia is unable to log in</p>
+      <p>↓</p>
+      <p>Sofia contacts Helpdesk</p>
+      <p>↓</p>
+      <p>Jordan verifies identity and resets the password</p>
+      <p>↓</p>
+      <p>Sofia logs in successfully</p>
+
+    </div>
+
+
+  </section>
+
+  <section class="project-section">
+
+    <h2>Password Reset by Helpdesk</h2>
+
+    <p>
+      After verifying the user’s identity, the helpdesk technician (Jordan) performed a secure password reset through
+      Microsoft Entra ID. This restored access while maintaining proper security controls.
+    </p>
+
+    <div class="lab-gallery">
+      <figure>
+        <img src="./EntraID photo/8.jpg" alt="Password reset in Entra ID">
+        <figcaption>
+          Helpdesk technician resetting user password in Microsoft Entra ID
+        </figcaption>
+      </figure>
+    </div>
+
+  </section>
+
+
+  <section class="project-section">
+
+    <h2>Security Analyst Perspective: Sign-In Logs</h2>
+
+    <p>
+      I analyzed sign-in logs to track authentication activity and identify issues.
+    </p>
+
+    <ul class="bullet-list">
+      <li>Multiple failed login attempts by Sofia</li>
+      <li>Successful authentication by Jordan (Helpdesk)</li>
+      <li>Successful login by Sofia after password reset</li>
+      <li>Logs included timestamps, device details, and location</li>
+    </ul>
+
+    <p>
+      The failure log showed: "Error validating credentials due to invalid username or password."
+      This confirmed the issue was incorrect credentials rather than a system failure.
+    </p>
+
+    <div class="lab-gallery">
+      <div class="lab-gallery">
+        <img src="./EntraID photo/9.png">
+        <img src="./EntraID photo/9.9.jpg">
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="project-section">
+
+    <h2>Audit Logs & Activity Tracking</h2>
+
+    <ul class="bullet-list">
+      <li>Failed self-service password reset attempt by Sofia</li>
+      <li>Password reset performed by Jordan (Helpdesk)</li>
+      <li>Target user: Sofia Diaz</li>
+      <li>Successful password update and login</li>
+    </ul>
+
+    <p>
+      All actions were fully traceable. Every activity performed by both Sofia and Jordan
+      was recorded in audit logs, providing full visibility into the incident.
+    </p>
+
+    <div class="lab-gallery">
+      <img src="./EntraID photo/8.8.jpg">
+      <img src="./EntraID photo/8.8.8.jpg">
+      <img src="./EntraID photo/8.8.8.8.jpg">
+    </div>
+
+  </section>
+
+  <section class="project-section">
+
+    <h2>Key Takeaway</h2>
+
+    <p>
+      This project demonstrated how role separation and least privilege work together
+      with logging and monitoring in a real-world identity system.
+    </p>
+
+    <p>
+      Even a simple login issue can be tracked end-to-end, allowing administrators
+      and security analysts to validate actions, understand user behavior,
+      and maintain security visibility.
+    </p>
+
+    <p>
+      In the next phase, I will enhance this environment by implementing Conditional Access
+      policies and Multi-Factor Authentication (MFA).
+    </p>
+
+  </section>
+
+
+  <footer class="site-footer">
+    <p>© 2026 TechSpace</p>
+    <p class="footer-sub">Cloud • Identity • Security Labs</p>
+    <p class="site-disclaimer">
+      Images used in this portfolio is for educational and demonstration purposes only.
+  </footer>
+
+
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

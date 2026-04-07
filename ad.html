@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>welcome to my tech space</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">Tech Space</a>
+
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <h1 class="lab-title">Active Directory Lab – Implementation Steps</h1>
+
+  <!-- STEP 1 -->
+  <div class="lab-card">
+    <h2>1. Domain Controller Deployment</h2>
+    <p>
+      I began by creating a virtual machine running Windows Server 2025
+      Datacenter Azure Edition in Microsoft Azure to serve as the Domain Controller.
+    </p>
+
+    <p>
+      After deployment, I installed Active Directory Domain Services (AD DS),
+      promoted the server to a Domain Controller, and created a new forest:
+      <strong>company.local</strong>.
+    </p>
+
+    <div class="lab-gallery">
+      <img src="./AD pics/1.png" alt="VM Creation">
+      <img src="./AD pics/2.png" alt="AD DS Installation">
+      <img src="./AD pics/3.png" alt="Domain Promotion">
+    </div>
+  </div>
+
+
+  <!-- STEP 2 -->
+  <div class="lab-card">
+    <h2>2. Organizational Unit (OU) Structure</h2>
+    <p>
+      Under company.local, I created Branch 1 with Users, Computers, Servers,
+      and Groups OUs. Inside Users, I created nested department OUs.
+    </p>
+
+    <p>
+      This structure improves organization, simplifies GPO application,
+      and enables delegation of administrative control.
+    </p>
+
+    <p>While creating the users, I also selected 'User must change password at next logon.' This allows users to safely
+      set their own password, which only they should know. </p>
+
+    <div class="lab-gallery">
+      <img src="./AD pics/5.png" alt="OU Structure">
+      <img src="./AD pics/6.png" alt="Nested OUs">
+      <img src="./AD pics/7.png" alt="User Creation">
+      <img src="./AD pics/8.png" alt="User Creation">
+
+    </div>
+  </div>
+
+
+  <!-- STEP 3 -->
+  <div class="lab-card">
+    <h2>3. Security Groups & RBAC</h2>
+    <p>
+      I created Security Groups to implement role-based access control (RBAC).
+      Security Groups control access to resources such as file shares and GPO filtering.
+    </p>
+
+    <p>
+      Distribution Groups are used for email only and cannot assign permissions.
+    </p>
+
+    <div class="lab-gallery">
+      <img src="./AD pics/10.png" alt="Security Groups">
+      <img src="./AD pics/11.png" alt="RBAC Setup">
+      <img src="./AD pics/12.png" alt="RBAC Setup">
+
+    </div>
+  </div>
+
+
+  <!-- STEP 4 -->
+  <div class="lab-card">
+    <h2>4. Adding Users to Security Groups</h2>
+    <p>
+      I added the user Amalia Lee to the security group <strong>B1_IT_Users</strong>
+      to apply permissions at the group level.
+    </p>
+
+    <div class="lab-gallery">
+      <img src="./AD pics/13.png" alt="Add to Group">
+      <img src="./AD pics/14.png" alt="Group Membership Confirmation">
+      <img src="./AD pics/15.png" alt="Group Membership Confirmation">
+
+    </div>
+  </div>
+
+
+  <!-- STEP 5 – Group Policy Object (GPO) -->
+  <div class="lab-card">
+
+    <h2>5. Group Policy Object (GPO)</h2>
+
+    <p>
+      A <strong>Group Policy Object (GPO)</strong> is a collection of settings in
+      Active Directory that can be applied to domains or Organizational Units (OUs)
+      to centrally manage users and computers.
+    </p>
+
+    <div class="gpo-simple">
+
+      <div class="gpo-item">
+        <h4>Computer Configuration</h4>
+        <p>
+          Applies to the computer itself and remains the same regardless of which user logs in.
+        </p>
+      </div>
+
+      <div class="gpo-item">
+        <h4>User Configuration</h4>
+        <p>
+          Applies to user accounts and follows the user when they log in to a domain-joined device.
+        </p>
+      </div>
+
+      <div class="gpo-item">
+        <h4>Policies vs Preferences</h4>
+        <p>
+          Policies cannot be changed by users, while Preferences can be modified after deployment.
+        </p>
+      </div>
+
+    </div>
+
+    <h3>Lab Implementation</h3>
+
+    <p>
+      For this lab, I created a <strong>User Configuration Policies</strong> to restrict
+      access to the Control Panel by enabling:
+    </p>
+
+    <div class="gpo-highlight">
+      Prohibit access to Control Panel
+    </div>
+
+    <div class="lab-gallery">
+      <img src="./AD pics/19.png" alt="GPO Creation">
+      <img src="./AD pics/20.png" alt="Account Lockout Policy">
+      <img src="./AD pics/21.png" alt="Account Lockout Policy">
+
+    </div>
+
+    <p>
+      I created a <strong>Computer Configuration Policies</strong> for Account Lockout Policy
+    </p>
+
+    <div class="gpo-highlight">
+      Account Lockout Policy
+    </div>
+    <div class="lab-gallery">
+      <img src="./AD pics/22.png" alt="GPO Creation">
+      <img src="./AD pics/23.png" alt="Account Lockout Policy">
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- STEP 6 -->
+  <div class="lab-card">
+    <h2>6. Policy Testing & Verification</h2>
+    <p>
+      After linking the GPOs to the appropriate OUs, I tested policy enforcement
+      using:
+    </p>
+
+    <code>gpupdate /force</code>
+    <code>gpresult /r</code>
+
+    <div class="lab-gallery">
+      <img src="/AD pics/24.png" alt="gpresult Output">
+    </div>
+  </div>
+
+
+  <!-- STEP 7 -->
+  <div class="lab-card">
+    <h2>7. Network Configuration</h2>
+    <p>
+      Both machines were configured on the same subnet (255.255.255.0).
+      The Domain Controller was assigned a static IP address.
+    </p>
+
+    <p>
+      The client DNS server was set to the Domain Controller IP.
+      Connectivity was verified using nslookup.
+    </p>
+
+    <div class="lab-gallery">
+      <img src="/AD pics/26.jpg" alt="IP Config">
+      <img src="/AD pics/27.jpg" alt="DNS Settings">
+      <img src="/AD pics/28.png" alt="DNS Settings">
+
+    </div>
+  </div>
+
+
+  <!-- STEP 8 -->
+  <div class="lab-card">
+    <h2>8. Joining the Client to the Domain</h2>
+    <p>
+      The client machine was joined to <strong>company.local</strong>
+      using Domain Controller credentials.
+    </p>
+
+    <p>
+      After joining, IT department users can successfully log in using their domain credentials.
+    </p>
+
+    <div class="lab-gallery">
+      <img src="./AD pics/30.png" alt="Domain Join">
+      <img src="./AD pics/31.png" alt="Welcome to Domain">
+      <img src="./AD pics/32.png" alt="Welcome to Domain">
+      <img src="./AD pics/33.png" alt="Welcome to Domain">
+
+
+    </div>
+  </div>
+
+  </section>
+
+
+  <footer class="site-footer">
+    <p>© 2026 TechSpace</p>
+    <p class="footer-sub">Cloud • Identity • Security Labs</p>
+    <p class="site-disclaimer">
+      Images used in this portfolio is for educational and demonstration purposes only.
+  </footer>
+
+  <!-- Lightbox HTML -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

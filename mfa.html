@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>welcome to my tech space</title> -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">Tech Space</a>
+
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <section class="project-container">
+
+
+    <h1 class="project-title">Multi-Factor Authentication (MFA) Implementation</h1>
+
+    <p class="project-intro">
+      Passwords alone are not enough. A single compromised password can allow attackers
+      to access an entire account. Multi-Factor Authentication (MFA) adds an additional
+      layer of security that helps protect user identities even when passwords are stolen.
+    </p>
+
+
+    <div class="project-card">
+
+      <h2> Passwords Alone Are Not Enough</h2>
+
+      <p>
+        User credentials are frequently stolen through:</p>
+
+      <ul class="security-list">
+        <li>Phishing emails</li>
+        <li>Data breaches</li>
+        <li>Credential stuffing attacks</li>
+        <li>Fake login pages designed to mimic legitimate services</li>
+      </ul>
+
+      <p>
+        If an attacker steals only a password, they may gain access immediately.
+        However, when MFA is enabled, a second authentication factor is required,
+        preventing unauthorized access.
+      </p>
+
+    </div>
+
+
+    <!-- MFA Explanation -->
+    <div class="project-card">
+
+      <h2>What is Multi-Factor Authentication (MFA)?</h2>
+
+      <p>
+        Multi-Factor Authentication verifies a user's identity using two or more
+        factors:
+      </p>
+
+      <div class="mfa-grid">
+
+        <div class="mfa-box">
+          <h3>Something You Know</h3>
+          <p>Password or PIN</p>
+        </div>
+
+        <div class="mfa-box">
+          <h3>Something You Have</h3>
+          <p>Mobile phone or authenticator app</p>
+        </div>
+
+        <div class="mfa-box">
+          <h3>Something You Are</h3>
+          <p>Biometrics such as fingerprint or facial recognition</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Real World Example -->
+    <div class="project-card">
+
+      <h2>How MFA Stops Real Attacks</h2>
+
+      <ul class="security-list">
+
+        <li>
+          <strong>Data Breach:</strong>
+          An attacker obtains a password from a leaked database, but cannot log in
+          because they do not have the second authentication factor.
+        </li>
+
+        <li>
+          <strong>Phishing Attack:</strong>
+          A user accidentally enters their password on a fake login page,
+          but access is still blocked without MFA approval.
+        </li>
+
+        <li>
+          <strong>Credential Stuffing:</strong>
+          Automated login attempts fail because MFA requires user verification.
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- Lab Example -->
+    <div class="project-card">
+
+      <h2>Lab Example: MFA Deployment in Microsoft Entra ID</h2>
+
+      <p>
+        As part of my Identity and Access Management lab environment, I configured
+        Multi-Factor Authentication when provisioning new users in Microsoft Entra ID.
+      </p>
+
+      <p>
+        Below is an example scenario for a new employee account.
+      </p>
+
+    </div>
+
+
+    <!-- Steps -->
+    <div class="project-card">
+
+      <h2>User Onboarding Example</h2>
+
+      <ol class="steps-list">
+
+        <li>
+          Created a new user account for <strong>Amalia (HR Department)</strong> in Microsoft Entra ID.
+        </li>
+
+        <li>
+          Assigned a temporary password and required a password change at first login.
+        </li>
+
+        <li>
+          During the first sign-in, the user was prompted to configure Multi-Factor Authentication.
+        </li>
+
+        <li>
+          The user downloaded the <strong>Microsoft Authenticator</strong> mobile application.
+        </li>
+
+        <li>
+          A QR code was scanned using the authenticator app to link the device.
+        </li>
+
+        <li>
+          A verification number was generated and entered to complete setup.
+        </li>
+
+      </ol>
+    </div>
+
+
+
+
+
+    <div class="mfa-section">
+
+      <h2>MFA Enrollment Process</h2>
+
+      <div class="mfa-gallery">
+
+        <div class="mfa-card">
+          <img src="./mfa/2.jpg">
+          <p class="mfa-caption">User prompted to configure MFA during first login</p>
+        </div>
+
+        <div class="mfa-card">
+          <img src="./mfa/33.jpg">
+          <p class="mfa-caption">User asked to download the Microsoft Authenticator app</p>
+        </div>
+
+        <div class="mfa-card">
+          <img src="./mfa/44.jpg">
+          <p class="mfa-caption">QR code scanned using Microsoft Authenticator</p>
+        </div>
+
+        <div class="mfa-card">
+          <img src="./mfa/66.jpg">
+          <p class="mfa-caption">Verification number generated</p>
+        </div>
+
+        <div class="mfa-card">
+          <img src="./mfa/111.jpg">
+          <p class="mfa-caption">User approves login via Authenticator app</p>
+        </div>
+
+        <div class="mfa-card">
+          <img src="./mfa/8.jpg">
+          <p class="mfa-caption">MFA verification completed</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Result -->
+    <div class="project-card">
+
+      <h2>Authentication Process After MFA Setup</h2>
+
+      <p>
+        Once MFA is enabled, the login process includes two verification steps:
+      </p>
+
+      <ul class="security-list">
+
+        <li>Step 1: Enter account password</li>
+
+        <li>Step 2: Approve the sign-in request through the Microsoft Authenticator app</li>
+
+      </ul>
+
+      <p>
+        In many cases, the authenticator app itself requires biometric verification
+        such as fingerprint or facial recognition before approving the request.
+      </p>
+
+      <p>
+        This means an attacker would need access to the user's password,
+        physical device, and device unlock method.
+      </p>
+
+    </div>
+
+
+    <!-- Takeaway -->
+    <div class="project-card">
+
+      <h2>Key Security Takeaway</h2>
+
+      <p>
+        Passwords alone are no longer sufficient to protect user identities.
+        Multi-Factor Authentication is one of the most effective security
+        controls organizations can implement to reduce account compromise.
+      </p>
+
+      <p>
+        Implementing MFA significantly improves identity security and protects
+        against many of the most common attack methods used today.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <footer class="site-footer">
+    <p>© 2026 TechSpace</p>
+    <p class="footer-sub">Cloud • Identity • Security Labs</p>
+    <p class="site-disclaimer">
+      Images used in this portfolio is for educational and demonstration purposes only.
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script src="./js/script.js"></script>
+
+
+</body>
+
+</html>

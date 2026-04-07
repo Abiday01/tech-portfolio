@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>welcome to my tech space</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">Tech Space</a>
+
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="page-overview">
+      <!-- <a href="projects.html" class="back-link">← Back to Projects</a> -->
+
+      <h1>IT Support Workflow</h1>
+
+      <p>
+        This page provides an overview of common IT support workflows, including
+        call handling best practices and a ServiceNow-style incident ticket example.
+        It demonstrates how issues are documented, troubleshooted, and resolved
+        in a professional IT support environment.
+      </p>
+
+      <!-- <p class="overview-note">
+        Examples shown are for educational and portfolio purposes only.
+      </p> -->
+    </header>
+
+
+
+    <h2 class="recipes-title">Call Handling Guide</h2>
+
+    <div class="guide-container">
+      <div class="guide-card">
+        <h3>Greeting &amp Readiness</h3>
+        <p>
+          - Greet the user in a friendly, professional way. <br>
+          - Let them explain what’s going on without interrupting.<br>
+          - Acknowledge the issue so they know you’re listening.
+        </p>
+      </div>
+
+      <div class="guide-card">
+        <section>
+          <h3>Gather Information</h3>
+          <p>Ask the right questions to understand the problem and narrow it down.</p>
+
+          <ul class="bullets">
+            <li>When did the issue start?</li>
+            <li>What were you doing before it happened?</li>
+            <li>When was the last time it worked correctly?</li>
+          </ul>
+
+          <p>Listen carefully and respond clearly and respectfully.</p>
+        </section>
+      </div>
+
+      <div class="guide-card">
+        <h3>Reassure the User</h3>
+        <p>
+          - Let the user know you’re looking into the issue.<br>
+          - Keep them in the loop as you troubleshoot so they don’t
+          feel stuck or ignored.
+        </p>
+      </div>
+
+      <div class="guide-card">
+        <h3>Troubleshooting</h3>
+        <p> - Use your technical knowledge to figure out what’s causing the issue. <br>
+          - Start with the simplest fixes first, then move to more complex ones if needed. <br>
+        <ul class="bullets">
+          <li>Example: If Outlook keeps signing out, try signing out and back in before reinstalling
+            the app, since reinstalling takes more time.</li>
+        </ul>
+        </p>
+      </div>
+
+      <div class="guide-card">
+        <h3>Escalation</h3>
+        <p>
+          - If the issue is outside your scope or permissions, escalate it to the appropriate team. <br>
+          - Make sure to pass along clear notes so the next tech knows what’s already been tried.
+        </p>
+      </div>
+
+      <div class="guide-card">
+        <h3>Closing the Call</h3>
+        <p>
+          - Confirm whether the issue is resolved. <br>
+          - Quickly summarize what was done.<br>
+          - Ask if the user needs help with anything else!
+        </p>
+      </div>
+
+      <div class="guide-card">
+        <section>
+          <h3>Documentation &amp; Ticket Closure</h3>
+          <p>Document everything clearly, including:</p>
+
+          <ul class="bullets">
+            <li>What was tried</li>
+            <li>What fixed the issue</li>
+            <li>What to do if it happens again</li>
+          </ul>
+
+          <p>Close the ticket properly.</p>
+        </section>
+      </div>
+
+    </div>
+
+
+
+
+
+    </div>
+    </div>
+
+
+
+    <!-- ticketing system -->
+    <section class="incident-section">
+      <h2 class="recipes-title">Ticketing Systems</h2>
+
+      <p class="section-intro">
+        Example of incident documentation and resolution using a ServiceNow-style
+        workflow. <br>The incident examples shown below are mock scenarios created for portfolio
+        purposes to demonstrate ticket documentation, troubleshooting, and
+        resolution workflows.
+      </p>
+
+
+      <div class="incident-card">
+        <h3 class="incident-title">ServiceNow Incident</h3>
+
+        <!-- Incident Metadata -->
+        <div class="incident-grid">
+          <div><strong>Number:</strong> INC0010005</div>
+          <div><strong>State:</strong> Closed</div>
+
+          <div><strong>Caller:</strong> Anna</div>
+          <div><strong>Channel:</strong> Chat</div>
+
+          <div><strong>Category:</strong> Inquiry / Help</div>
+          <div><strong>Subcategory:</strong> Email</div>
+
+          <div><strong>Configuration Item:</strong> Microsoft Outlook</div>
+          <div><strong>Assignment Group:</strong> Help Desk</div>
+
+          <div><strong>Assigned To:</strong> Abida</div>
+          <div><strong>Priority:</strong> 4 – Low</div>
+
+          <div><strong>Impact:</strong> 3 – Low</div>
+          <div><strong>Urgency:</strong> 2 – Medium</div>
+        </div>
+
+        <!-- Short Description -->
+        <div class="incident-block">
+          <h4>Short Description</h4>
+          <p>
+            Outlook crashes and user unable to send emails after password change.
+          </p>
+        </div>
+
+        <!-- Description -->
+        <div class="incident-block">
+          <h4>Description</h4>
+          <p>
+            User reports that after changing their password earlier today via a
+            mobile device, Microsoft Outlook on their work laptop began crashing
+            and signing out automatically. User is unable to send emails.
+          </p>
+        </div>
+
+        <!-- Customer Visible -->
+        <div class="incident-block customer-visible">
+          <h4>Additional Comments (Customer Visible)</h4>
+          <p>
+          <p>
+            <strong>During troubleshooting:</strong><br><br>
+
+            <strong>User (Anna):</strong><br>
+            Hi, I changed my password on my phone earlier, and now Outlook on my laptop keeps crashing. I also can’t
+            send any emails.
+            <br><br>
+
+            <strong>Helpdesk Agent:</strong><br>
+            Hi Anna, thanks for reaching out. I see that you recently updated your password. Sometimes Outlook requires
+            reauthentication after a password change.
+
+
+            I’m going to guide you through signing out and back in.
+            <br><br>
+
+            <strong>User:</strong><br>
+            Okay, sounds good.
+            <br><br>
+
+            <strong>Helpdesk Agent:</strong><br>
+            Please sign out of Outlook completely, then reopen it. When prompted, sign in using your new password. Let
+            me know once you’ve done that.
+            <br><br>
+
+            <strong>User:</strong><br>
+            I signed back in, but it still seems a bit off.
+            <br><br>
+
+            <strong>Helpdesk Agent:</strong><br>
+            Thanks for trying that. I’m going to reconfigure your Outlook profile to sync properly with your updated
+            credentials. This may take a moment.
+            <br><br>
+
+            <strong>User:</strong><br>
+            Okay.
+            <br><br>
+
+            <strong>Helpdesk Agent:</strong><br>
+            All set on my end. Please restart Outlook one more time and try sending a test email.
+            <br><br>
+
+            <strong>User:</strong><br>
+            I just sent a test email and it worked!
+          </p>
+
+
+          <!-- Work Notes -->
+          <div class="incident-block work-notes">
+            <h4>Work Notes (Internal)</h4>
+            <ul>
+              <li>Verified user identity</li>
+              <li>Confirmed password was changed earlier today</li>
+              <li>Observed Outlook crashing and prompting for sign-in</li>
+              <li>Identified cached credentials using old password</li>
+              <li>Guided user through reauthenticating Outlook</li>
+              <li>User confirmed email functionality restored</li>
+            </ul>
+          </div>
+
+          <!-- Resolution -->
+          <div class="incident-block resolution">
+            <h4>Resolution Information</h4>
+            <p><strong>Knowledge:</strong> ✔️</p>
+            <p><strong>Resolution Code:</strong> Solution Provided</p>
+            <p><strong>Resolved By:</strong> Abida</p>
+            <p>
+              <strong>Resolution Notes:</strong><br>
+              Issue resolved by signing out of Outlook and signing back in using the
+              updated password. Cached credentials using the old password caused
+              Outlook to crash repeatedly. After reauthentication, Outlook launched
+              successfully and email functionality was restored. User confirmed send
+              and receive is working normally.
+            </p>
+          </div>
+
+          <div class="incident-status">
+            Final State: <span>Closed</span>
+          </div>
+        </div>
+    </section>
+
+  </main>
+
+
+
+
+  <footer class="site-footer">
+    <p>© 2026 TechSpace</p>
+    <p class="footer-sub">Cloud • Identity • Security Labs</p>
+    <p class="site-disclaimer">
+      Images used in this portfolio is for educational and demonstration purposes only.
+  </footer>
+
+</body>
+
+</html>
