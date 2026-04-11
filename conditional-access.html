@@ -26,44 +26,38 @@
   </nav>
 
 
-  <section class="project-container">
 
-    <!-- <a href="projects.html" class="back-link">← Back to Projects</a> -->
+
+  <section class="project-container">
 
     <h1 class="project-title">Conditional Access & Identity Security (Microsoft Entra ID)</h1>
 
     <p class="project-intro">
-      This lab focuses on securing a cloud identity environment using Microsoft Entra ID by implementing Conditional
-      Access policies. The goal was to enforce Zero Trust principles, strengthen authentication, and analyze identity
-      activity through security logs.
+      In this lab, I designed and implemented Conditional Access policies in Microsoft Entra ID to secure a cloud-based
+      identity environment.
+      The objective was to enforce Zero Trust principles by applying risk-based authentication controls, strengthening
+      identity protection,
+      and analyzing authentication behavior through security logs.
     </p>
 
   </section>
 
 
-  <!-- OBJECTIVES -->
   <section class="project-section">
 
     <h2>Objectives</h2>
 
     <ul class="bullet-list">
-      <li>Implement Conditional Access policies based on user risk</li>
-      <li>Enforce multi-factor authentication (MFA)</li>
-      <li>Apply least privilege and RBAC</li>
-      <li>Validate authentication flows</li>
-      <li>Analyze logs for monitoring</li>
+      <li>Design and implement Conditional Access policies based on identity risk and role sensitivity</li>
+      <li>Enforce multi-factor authentication (MFA) and advanced authentication strength policies</li>
+      <li>Apply Role-Based Access Control (RBAC) and least privilege principles</li>
+      <li>Validate authentication flows across different user personas</li>
+      <li>Analyze sign-in and audit logs for security monitoring and investigation</li>
     </ul>
-
-    <div class="lab-gallery">
-      <!-- <img src="./conditional access/0.jpg"> -->
-
-
-    </div>
 
   </section>
 
 
-  <!-- ROLES -->
   <section class="project-section">
 
     <h2>Environment & Roles</h2>
@@ -71,18 +65,18 @@
     <div class="role-grid">
 
       <div class="role-card">
-        <h4>Sofia (User)</h4>
-        <p>Standard user with limited access</p>
+        <h4>Sofia (Standard User)</h4>
+        <p>Baseline access used to validate default Conditional Access enforcement, basic MFA policy</p>
       </div>
 
       <div class="role-card">
-        <h4>Jordan (IT)</h4>
-        <p>Elevated access with controls</p>
+        <h4>Jordan (IT Operations)</h4>
+        <p>Elevated access with layered policies and session controls</p>
       </div>
 
       <div class="role-card">
-        <h4>Amelia (Admin)</h4>
-        <p>Privileged account requiring strong security</p>
+        <h4>Amelia (Privileged Administrator)</h4>
+        <p>High-risk account requiring phishing-resistant authentication</p>
       </div>
 
     </div>
@@ -93,50 +87,51 @@
   <!-- POLICIES -->
   <section class="project-section">
 
-    <h2>Conditional Access Policies</h2>
+    <h2>Conditional Access Policy Design</h2>
 
     <div class="policy-box">
-      <p><strong>All Users:</strong> MFA enforced</p>
-      <p><strong>IT Operations:</strong> MFA + session control</p>
-      <p><strong>Admins:</strong> Phishing-resistant MFA</p>
-      <p><strong>All Users:</strong> Block legacy authentication</p>
-      <p><strong>All Users:</strong> Block high-risk sign-ins</p>
+      <p><strong>All Users:</strong> Enforced multi-factor authentication (MFA)</p>
+      <p><strong>IT Operations:</strong> MFA + session controls (sign-in frequency: 3 hours)</p>
+      <p><strong>Privileged Administrators:</strong> Required phishing-resistant MFA (authentication strength)</p>
+      <p><strong>All Users:</strong> Blocked legacy authentication (POP/IMAP and non-modern protocols)</p>
+      <p><strong>All Users:</strong> Blocked high-risk sign-ins based on identity protection signals</p>
+      <p><strong>Location-Based Policy:</strong> Access blocked from all countries except the United States</p>
     </div>
 
+    <!-- IMAGES -->
     <div class="lab-gallery">
-      <img src="./conditional access/1.jpg">
-      <img src="./conditional access/2.jpg">
-      <img src="./conditional access/3.jpg">
-      <img src="./conditional access/4.jpg">
-      <img src="./conditional access/5.jpg">
-      <img src="./conditional access/6.jpg">
+      <img src="./conditional access/0.jpg" alt="Conditional Access Overview">
+      <img src="./conditional access/1.jpg" alt="MFA Policy">
+      <img src="./conditional access/2.jpg" alt="Session Control">
+      <img src="./conditional access/3.jpg" alt="Authentication Strength">
+      <img src="./conditional access/4.jpg" alt="Legacy Auth Block">
+      <img src="./conditional access/5.jpg" alt="Legacy Auth Block">
+
+      <img src="./conditional access/6.jpg" alt="Blocked high-risk sign-ins">
+      <img src="./conditional access/6.6.jpg" alt="Location Policy">
 
     </div>
 
   </section>
-
-
-  <!-- TESTING -->
   <section class="project-section">
 
-    <h2>Security Monitoring</h2>
+    <h2>Testing & Log Analysis</h2>
 
-    <p><strong>Sign-in Logs:</strong></p>
     <ul class="bullet-list">
-      <li>Authentication success/failure</li>
-      <li>Applied policies per login</li>
-      <li>Session behavior</li>
-      <li>MFA triggered for standard users</li>
-      <li>Multiple policies applied simultaneously</li>
-      <li>Admin login blocked without strong MFA</li>
-    </ul>
-    </ul>
+      <li><strong>MFA Enforcement:</strong> Standard user Sofia was prompted for MFA under the “All Users” policy, with
+        successful authentication confirmed in sign-in logs</li>
 
-    <p><strong>Audit Logs:</strong></p>
-    <ul class="bullet-list">
-      <li>Tracked changes</li>
-      <li>Verified admin actions</li>
-      <li>Confirmed policy enforcement</li>
+      <li><strong>Policy Layering:</strong> IT user Jordan had multiple Conditional Access policies applied
+        simultaneously, including MFA and session controls</li>
+
+      <li><strong>Session Control:</strong> Re-authentication was enforced every 3 hours based on configured sign-in
+        frequency</li>
+
+      <li><strong>Privileged Access Protection:</strong> Admin access was blocked when phishing-resistant MFA
+        requirements were not met, preventing unauthorized elevation</li>
+
+      <li><strong>Geographic Restriction:</strong> Sign-in attempts from locations outside the United States were
+        successfully blocked based on location-based policy</li>
     </ul>
 
 
@@ -147,28 +142,43 @@
       <img src="./conditional access/9.jpg">
       <img src="./conditional access/9.9.jpg">
 
-
-
     </div>
+
+    <!-- <h2>Security Monitoring & Log Analysis</h2> -->
+
+    <p><strong>Sign-in Logs:</strong></p>
+    <ul class="bullet-list">
+      <li>Analyzed authentication success and failure events</li>
+      <li>Reviewed Conditional Access policies applied per login</li>
+      <li>Observed session token behavior and reduced MFA prompts</li>
+    </ul>
+
+    <p><strong>Audit Logs:</strong></p>
+    <ul class="bullet-list">
+      <li>Tracked identity and access management changes</li>
+      <li>Verified administrative actions</li>
+      <li>Confirmed policy deployment and enforcement</li>
+    </ul>
 
   </section>
 
 
 
-  <!-- TAKEAWAYS -->
   <section class="project-section">
 
     <h2>Key Takeaways</h2>
 
     <ul class="bullet-list">
-      <li>Conditional Access enables the Zero Trust principle</li>
-      <li>Multiple Conditional Access policies can apply to a single user with stricter controls taking priority</li>
-      <li>Privileged accounts need stronger controls</li>
-      <li>Blocking legacy authentication reduces risk</li>
-      <li>Monitoring is critical for security visibility</li>
+      <li>Conditional Access enforces Zero Trust by continuously validating access decisions</li>
+      <li>Multiple Conditional Access policies can apply to a single user, with stricter controls taking priority</li>
+      <li>Privileged accounts require stronger authentication controls and tighter enforcement</li>
+      <li>Blocking legacy authentication significantly reduces the attack surface</li>
+      <li>Location-based restrictions help prevent unauthorized access attempts</li>
+      <li>Effective identity security requires both preventive controls and continuous monitoring</li>
     </ul>
 
   </section>
+
 
 
 
