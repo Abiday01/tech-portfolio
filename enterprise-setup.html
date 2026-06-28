@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to my tech space</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">Tech Space</a>
+
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="projects.html">projects</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <section class="project-container">
+
+        <h1 class="project-title">
+            Enterprise Microsoft 365 User &amp; Identity Management
+        </h1>
+
+        <p class="project-intro">
+            The objective of this project is to simulate a real enterprise IT environment. I built a fictional large healthcare organization called Mount
+            Sinai Systems (created for educational purposes only and not affiliated with the real organization).
+
+            This lab demonstrates core Microsoft 365 administration tasks, including onboarding new users through the
+            Microsoft 365 Admin Center, creating security groups in Microsoft Entra ID, assigning administrative roles,
+            configuring Microsoft Authenticator for secure user authentication, and managing Microsoft 365 Business
+            Premium licenses through both individual and group-based assignments.
+
+        </p>
+
+    </section>
+
+
+
+    <section class="project-section">
+
+        <h2>Company Environment</h2>
+
+        <p>
+
+            To simulate a real enterprise IT environment, I created two IT users accounts and three end-user accounts
+            representing different departments.
+
+            The IT Administrator was assigned full administrative permissions, Help Desk Technician was granted limited
+            permissions to perform common support tasks. Three standard users from Human Resources, Finance, and
+            Marketing department.
+        </p>
+
+        <div class="role-grid">
+
+            <div class="role-card">
+                <h4>Emma Carter</h4>
+                <p>Human Resources</p>
+            </div>
+
+            <div class="role-card">
+                <h4>Sofia Diaz</h4>
+                <p>Finance</p>
+            </div>
+
+            <div class="role-card">
+                <h4>Olivia Cooper</h4>
+                <p>Marketing</p>
+            </div>
+
+            <div class="role-card">
+                <h4>Jordan Lee</h4>
+                <p>Help Desk Technician</p>
+            </div>
+
+            <div class="role-card">
+                <h4>Administrator</h4>
+                <p>Global Administrator</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="project-section">
+
+        <h2>User Provisioning Through Microsoft 365 Admin Center</h2>
+
+        <p>
+            User accounts were created through the Microsoft 365 Admin Center. During account creation, each user was
+            assigned a temporary password and required to change it upon their first sign-in. Microsoft 365 Business
+            Premium licenses were then assigned, and a email was sent with instructions on how to access Microsoft 365
+            applications.
+
+        </p>
+
+        <div class="lab-gallery">
+
+            <img src="./IT project/m1.jpg">
+            <img src="./IT project/m2.png">
+            <img src="./IT project/m3.jpg">
+            <img src="./IT project/m4.jpg">
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <section class="project-section">
+
+        <h2>Security Groups & Membership Management</h2>
+
+        <p>
+            To organize users, I created security groups in Microsoft Entra ID.
+            This lab demonstrates both Assigned and Dynamic membership.
+        </p>
+
+        <div class="membership-grid">
+
+            <div class="membership-box">
+                <h3>Assigned Membership</h3>
+
+                <p>
+                    Users are manually added or removed by an administrator.
+                    This provides greater control and makes it easier to manage
+                    individual users when exceptions are required.
+                </p>
+            </div>
+
+            <div class="membership-box">
+                <h3>Dynamic Membership</h3>
+
+                <p>
+                    Users are automatically added or removed based on predefined
+                    user attributes, reducing manual administration in larger
+                    environments.
+                </p>
+            </div>
+
+        </div>
+
+        <p>
+
+            The HR security group uses Assigned Membership, where users were manually added by an administrator.
+            The Finance security group uses Dynamic Membership, automatically adding users whose Department attribute is
+            set to Finance.
+            An All Company Users dynamic group was also created to automatically include every new employee added to the
+            Microsoft 365 tenant.
+
+        </p>
+
+        <div class="lab-gallery">
+            <img src="./IT project/s1.png">
+            <img src="./IT project/s11.png">
+            <img src="./IT project/s2.png">
+            <img src="./IT project/s4.png">
+            <img src="./IT project/s5.png">
+            <img src="./IT project/s6.png">
+        </div>
+
+
+        <p>
+            Understanding both membership methods is important in enterprise
+            administration. Dynamic groups simplify management for large
+            organizations by automating membership, while Assigned groups
+            provide administrators with precise control whenever individual
+            exceptions are required.</p>
+    </section>
+
+
+
+
+
+    <section class="project-section">
+
+        <h2> Assigning Roles through Microsoft Entra ID
+        </h2>
+
+        <p>
+            I configured roles in Microsoft Entra ID to simulate a real enterprise IT environment. Each account was
+            assigned only the permissions required to perform its responsibilities, following the principle of least
+            privilege.
+
+        </p>
+
+        <div class="role-grid">
+
+            <div class="role-card">
+                <h4>IT Administrator (Admin)</h4>
+                <p>Assigned the Global Administrator role with full administrative access to
+                    manage users, Microsoft 365 licenses, security groups, administrative roles, and overall Microsoft
+                    Entra ID configuration.
+                </p>
+            </div>
+
+            <div class="role-card">
+                <h4>Help Desk Technician (Jordan)</h4>
+                <p>
+                    Assigned the Helpdesk Administrator role to perform common IT support tasks, including password
+                    resets and user account management, while operating with limited administrative permissions.
+                </p>
+            </div>
+
+            <div class="role-card">
+                <h4>Department Users</h4>
+                <p>
+                    Standard user accounts representing Human Resources,
+                    Finance, and Marketing with access limited to everyday business resources.
+                </p>
+            </div>
+
+
+        </div>
+        <div class="lab-gallery">
+
+            <img src="./IT project/h3.jpg">
+            <img src="./IT project/h4.jpg">
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="project-section">
+
+        <h2>Microsoft 365 Licensing</h2>
+
+        <p>
+            After organizing users and security groups, I assigned Microsoft 365 Business Premium licenses
+            using multiple enterprise licensing methods to understand their operational advantages.
+        </p>
+
+        <ul class="bullet-list">
+
+            <li>Assigned Microsoft 365 Business Premium licenses during user creation.</li>
+
+            <li>Assigned licenses directly to individual users.</li>
+
+            <li>Assigned licenses through Microsoft Entra ID security groups.</li>
+
+            <li>Verified successful license assignment and service activation.</li>
+
+        </ul>
+
+        <div class="lab-gallery">
+
+            <img src="./IT project/L1.png">
+            <img src="./IT project/L2.png">
+            <img src="./IT project/L3.png">
+            <img src="./IT project/L4.jpg">
+
+        </div>
+
+        <p>
+            Group-based licensing reduces administrative overhead for large organizations by automatically licensing
+            members of a security group. Individual licensing, however, provides greater flexibility when managing
+            exceptions, temporary users, contractors, or department-specific requirements.
+            Understanding when to use each licensing strategy is an important responsibility for Microsoft 365
+            administrators.
+        </p>
+
+    </section>
+
+    
+
+    <section class="project-section">
+
+        <h2>User Authentication &amp; First Sign-In</h2>
+
+        <p>
+            After provisioning, users authenticated with their temporary credentials and completed the required password
+            change
+            during their first sign-in. This follows Microsoft's recommended onboarding process and ensures only the
+            user knows
+            their permanent password.
+        </p>
+
+        <div class="lab-gallery">
+
+            <img src="./IT project/A1.jpg">
+            <img src="./IT project/A2.jpg">
+            <img src="./IT project/A3.jpg">
+            <img src="./IT project/A4.jpg">
+            <img src="./IT project/A5.jpg">
+            <img src="./IT project/A6.jpg">
+            <img src="./IT project/A7.jpg">
+            <img src="./IT project/A8.jpg">
+
+        </div>
+
+        <p>
+            Emma Carter successfully authenticated into her Microsoft account and
+            signed in to Outlook, confirming that her user account, Microsoft 365 Business Premium license, and Exchange
+            Online mailbox were provisioned correctly. She also received the Microsoft 365 welcome email.
+        </p>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="project-section">
+
+        <h2>Key Takeaways</h2>
+
+        <ul class="bullet-list">
+
+            <li>Provisioned enterprise user accounts through Microsoft 365 Admin Center.</li>
+
+            <li>Designed role-based administrative accounts following the principle of least privilege.</li>
+
+            <li>Configured first sign-in authentication and password change requirements.</li>
+
+            <li>Created departmental security groups within Microsoft Entra ID.</li>
+
+            <li>Implemented both Assigned and Dynamic group membership.</li>
+
+            <li>Compared individual and group-based Microsoft 365 licensing strategies.</li>
+
+            <li>Verified successful authentication, licensing, and Microsoft 365 service access.</li>
+
+            <li>Built a scalable identity environment following enterprise administration best practices.</li>
+
+        </ul>
+
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 TechSpace</p>
+        <p class="footer-sub">Cloud • Identity • Security Labs</p>
+        <p class="site-disclaimer">
+            Images used in this portfolio is for educational and demonstration purposes only.
+    </footer>
+
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
