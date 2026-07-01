@@ -30,11 +30,13 @@
     <section class="project-container">
 
         <h1 class="project-title">
-            Enterprise Microsoft 365 User &amp; Identity Management
+           Enterprise IT Support Environment
         </h1>
 
         <p class="project-intro">
-            The objective of this project is to simulate a real enterprise IT environment. I built a fictional large healthcare organization called Manhattan Health Systems (created for educational purposes only and not affiliated with the real organization).
+            The objective of this project is to simulate a real enterprise IT environment. I built a fictional large
+            healthcare organization called Manhattan Health Systems (created for educational purposes only and not
+            affiliated with the real organization).
 
             This lab demonstrates core Microsoft 365 administration tasks, including onboarding new users through the
             Microsoft 365 Admin Center, creating security groups in Microsoft Entra ID, assigning administrative roles,
@@ -65,26 +67,31 @@
 
             <div class="role-card">
                 <h4>Emma Carter</h4>
-                <p>Human Resources</p>
+                <!-- <p>Human Resources</p> -->
+                <p>HR Manager</p>
             </div>
 
             <div class="role-card">
                 <h4>Sofia Diaz</h4>
-                <p>Finance</p>
+                <!-- <p>Finance</p> -->
+                <p>Financial Analyst</p>
             </div>
 
             <div class="role-card">
                 <h4>Olivia Cooper</h4>
-                <p>Marketing</p>
+                <!-- <p>Marketing</p> -->
+                <p>Marketing Coordinator</p>
             </div>
 
             <div class="role-card">
                 <h4>Jordan Lee</h4>
-                <p>Help Desk Technician</p>
+                <!-- <p>Help Desk Technician</p> -->
+                <p>Helpdesk Administrator</p>
             </div>
 
             <div class="role-card">
                 <h4>Administrator</h4>
+                <!-- <p>Global Administrator</p> -->
                 <p>Global Administrator</p>
             </div>
 
@@ -193,7 +200,7 @@
         <h2> Assigning Roles through Microsoft Entra ID
         </h2>
 
-          <p>
+        <p>
             I configured roles in Microsoft Entra ID. You can also assign through the Microsoft Admin Center. Each
             account was assigned only the permissions required to perform its responsibilities, following the principle
             of least privilege.
@@ -233,6 +240,8 @@
             <img src="./IT project/h3.jpg">
             <img src="./IT project/h5.png">
             <img src="./IT project/h4.jpg">
+
+
 
         </div>
 
@@ -283,7 +292,7 @@
 
     </section>
 
-    
+
 
     <section class="project-section">
 
@@ -321,10 +330,217 @@
 
 
 
+    <!-- SHARED MAILBOXS -->
+
+    <section class="project-section">
+
+        <h2>Department Shared Mailboxes</h2>
+
+        <p>
+            To improve communication between departments, I configured shared mailboxes. Shared mailboxes allow multiple
+            employees to
+            receive, read, and respond to emails from a single departmental address without
+            sharing individual user passwords.
+        </p>
+
+        <p>
+            Using the Microsoft 365 Admin Center, I navigated to
+            <strong>Teams & Groups → Shared Mailboxes</strong> and created departmental
+            shared mailboxes for:
+        </p>
+
+        <ul class="bullet-list">
+            <li>Human Resources</li>
+            <li>Finance</li>
+            <li>Marketing</li>
+            <li>IT Support</li>
+        </ul>
+
+        <p>
+            After creating each shared mailbox, I assigned users to their respective
+            department so they could access and manage shared communications.
+        </p>
+
+        <div class="lab-gallery">
+            <img src="./sharedmailbox /smb1.jpg" alt="Creating Shared Mailboxes">
+            <img src="./sharedmailbox /smb2.jpg" alt="Creating Shared Mailboxes">
+
+        </div>
+
+        <hr>
+
+        <h3>IT Support Shared Mailbox</h3>
+
+        <p>
+            The IT Support shared mailbox was assigned to both the
+            <strong>Global Administrator</strong> and the
+            <strong>Help Desk Technician (Jordan)</strong>. This allows either technician to
+            monitor incoming requests and respond from a single IT Support email address.
+        </p>
+
+        <div class="lab-gallery">
+            <img src="./sharedmailbox /smb4.jpg" alt="IT Shared Mailbox Members">
+            <img src="./sharedmailbox /smb5.jpg" alt="IT Shared Mailbox Members">
+
+        </div>
+
+        <hr>
+
+        <h3>Outlook Configuration</h3>
+
+        <p>
+            To verify access, I signed into Outlook using both the Administrator and
+            Jordan's Help Desk account. I added the shared mailbox by selecting
+            <strong>Add Shared Folder or Mailbox</strong> and entering the IT Support shared
+            mailbox email address.
+        </p>
+
+        <p>
+            Once configured, both users had access to:
+        </p>
+
+        <ul class="bullet-list">
+            <li>Their personal Outlook mailbox</li>
+            <li>The shared IT Support mailbox</li>
+        </ul>
+
+        <div class="lab-gallery">
+            <img src="./sharedmailbox /smb7.jpg" alt="IT Shared Mailbox Members">
+            <img src="./sharedmailbox /smb8.jpg" alt="IT Shared Mailbox Members">
+            <img src="./sharedmailbox /smb9.jpg" alt="IT Shared Mailbox Members">
+
+        </div>
+
+        <hr>
+
+        <h3>Verification & Testing</h3>
+
+        <p>
+            To verify the shared mailbox was functioning correctly, I signed into Outlook
+            as Emma Carter and sent an email to the IT Support shared mailbox.
+        </p>
+
+        <p>
+            Both Jordan and the Administrator were able to view the same email sent by Emma from the shared mailbox,
+            confirming that the mailbox was properly configured and accessible to all assigned members.
+        </p>
+
+        <div class="lab-gallery">
+            <img src="./sharedmailbox /smb10.jpg" alt="IT Shared Mailbox Members">
+            <img src="./sharedmailbox /smb11.jpg" alt="IT Shared Mailbox Members">
+        </div>
+
+    </section>
 
 
 
 
+
+    <section class="project-section">
+
+        <h2>IT Support Ticket Workflow Using Spiceworks</h2>
+
+        <p>
+            Finance employee Sofia Diaz submitted an IT support ticket reporting that Outlook displayed a "Something
+            Went Wrong" error and could not be accessed. I investigated the issue using a structured help desk
+            troubleshooting process to identify the root cause and restore access.
+        </p>
+
+        <div class="lab-gallery">
+
+            <figure>
+                <img src="./spiceworks/tk3.jpg">
+                <figcaption>Sofia submits a support request through the organization's help desk portal.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="./spiceworks/tk4.jpg">
+                <figcaption>An IT Support Technician can also create a ticket on behalf of a user.</figcaption>
+            </figure>
+
+        </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+        <h2>Troubleshooting</h2>
+
+        <p>
+            I acknowledged the user's request and reassured her that I was actively investigating the issue. I first
+            verified the user's identity and department to locate the correct Microsoft 365 account. Rather than making
+            assumptions or troubleshooting at random, I gathered additional information by asking targeted questions to
+            narrow down the possible root cause before beginning my investigation.
+        </p>
+
+        <ul class="bullet-list">
+            <li>Verified the user's identity and department</li>
+            <li>Asked clarifying questions to gather additional information.</li>
+            <li>Documented the user's responses and identified potential root causes.</li>
+            <li>Investigated the user's Microsoft 365 account configuration.</li>
+        </ul>
+
+        <div class="lab-gallery">
+
+            <img src="./spiceworks/tk5.jpg">
+            <img src="./spiceworks/tk6.jpg">
+            <img src="./spiceworks/tk8.jpg">
+
+        </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+        <h2>Root Cause & Resolution</h2>
+
+        <p>
+            While reviewing the user's account in the Microsoft 365 Admin Center, I discovered
+            that the Microsoft 365 Business Premium license had been removed.
+            Without an assigned license, the user could not access Outlook, Teams, OneDrive,
+            or other Microsoft 365 services.
+        </p>
+
+        <p>
+            I reassigned the license, restoring access to all Microsoft 365 applications.
+        </p>
+
+        <div class="lab-gallery">
+
+            <img src="./spiceworks/tk9.jpg">
+            <img src="./spiceworks/tk10.jpg">
+
+        </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+        <h2>Verification & Closure</h2>
+
+        <p>
+            After reassigning the Microsoft 365 Business Premium license, I followed up with the user and asked her to
+            sign in again to verify that Outlook was working correctly.
+            Sofia successfully signed in to Outlook and also confirmed that all Microsoft 365 services were working normally.
+            I then documented the root cause, recorded the resolution steps and closed the ticket.
+        </p>
+
+        <div class="lab-gallery">
+            <img src="./spiceworks/tk11.jpg">
+            <img src="./spiceworks/tk12.jpg">
+            <img src="./spiceworks/tk14.jpg">
+
+        </div>
+      
+<div class="button-wrapper">
+    <a href="spiceworks.html" class="project-btn">
+        View Full Detailed Ticket Walkthrough →
+    </a>
+</div>
+    </section>
 
 
     <section class="project-section">
