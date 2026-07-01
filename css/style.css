@@ -1252,3 +1252,78 @@ body {
     margin:0;
     line-height:1.6;
 }
+
+
+
+/* spiceworks code */
+.lab-gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.lab-gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+
+/* spiceworks */
+
+/* Big outer card */
+.ticket-classification-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:30px;
+    margin-top:20px;
+}
+
+/* Two-column layout */
+.ticket-columns{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:35px;
+    align-items:start;
+}
+
+/* Left mini cards */
+.ticket-category-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-top:15px;
+}
+
+/* Right table */
+.priority-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.priority-table th,
+.priority-table td{
+    border:1px solid #e5e7eb;
+    padding:14px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.priority-table th{
+    background:#f8fafc;
+}
+
+/* Responsive */
+@media (max-width:900px){
+
+.ticket-columns{
+    grid-template-columns:1fr;
+}
+
+.ticket-category-grid{
+    grid-template-columns:1fr;
+}
+
+}
