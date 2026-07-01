@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to my tech space</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">Tech Space</a>
+
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="projects.html">projects</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <main>
+        <section class="project-container">
+
+            <h1 class="project-title"> Ticketing System – Spiceworks
+            </h1>
+
+            <p class="project-intro">
+                This project demonstrates a complete end-to-end IT support workflow using the Spiceworks ticketing
+                system. It covers the full lifecycle of a support ticket, from creation and triage, through
+                troubleshooting and resolution, to documentation and closure, while maintaining clear communication with
+                the end user throughout the process.
+
+                <br><br>
+                The project also includes a realistic support ticket submitted by an end user and resolved from start to
+                finish. It showcases the technical troubleshooting process, proper ticket documentation, ticket
+                statuses, workflow management, and IT service desk best practices used in a professional support
+                environment.
+            </p>
+
+        </section>
+
+
+        <section class="project-section">
+
+            <h2>What is a Ticketing System?</h2>
+
+            <p>A ticketing system allows end users to report technical issues and allows the IT support team to
+                troubleshoot, document, track, and resolve those issues. Tickets can be submitted through a self-service
+                portal or created by an IT technician on behalf of a user during a phone call. Each ticket follows a
+                structured workflow to ensure consistent, efficient, and well-documented support.</p>
+
+
+
+            <div class="role-grid">
+
+                <div class="role-card">
+                    <h4>Common Ticket Information</h4>
+
+                    <ul class="bullet-list">
+                        <li>Organization Name</li>
+                        <li>Issue Description</li>
+                        <li>Attachments</li>
+                        <li>Category</li>
+                        <li>Priority Level</li>
+                        <li>Assigned Technician</li>
+                        <li>Status</li>
+                    </ul>
+
+                </div>
+
+                <div class="role-card">
+
+                    <h4>Technician Responsibilities</h4>
+
+                    <ul class="bullet-list">
+                        <li>Communicate with the user</li>
+                        <li>Troubleshoot the issue</li>
+                        <li>Document findings</li>
+                        <li>Resolve the incident</li>
+                        <li>Close the ticket</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <p>
+                There are other common ticketing platforms such as ServiceNow, Jira Service Management,
+                and Freshservice. Although each platform has a different interface,
+                they all follow the same core IT service management (ITSM) workflow.
+            </p>
+
+        </section>
+
+
+
+        <section class="project-section">
+
+            <p>
+                Every support ticket is categorized and assigned a priority based on its
+                business impact. This helps IT teams organize workloads and respond to
+                critical issues efficiently.
+            </p>
+
+
+            <div class="ticket-columns">
+
+                <!-- LEFT -->
+                <div>
+
+                    <h3>Common Ticket Categories</h3>
+
+                    <div class="ticket-category-grid">
+
+                        <div class="role-card">
+                            <h4>Software</h4>
+                            <p>Applications, operating systems, Microsoft 365, cloud services.</p>
+                        </div>
+
+                        <div class="role-card">
+                            <h4>Hardware</h4>
+                            <p>Computers, monitors, printers, keyboards.</p>
+                        </div>
+
+                        <div class="role-card">
+                            <h4>Network</h4>
+                            <p>Wi-Fi connectivity, VPN access, DNS, internet issues.</p>
+                        </div>
+
+                        <div class="role-card">
+                            <h4>Account Access</h4>
+                            <p>Password resets, MFA, account lockouts, licensing, permissions.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+                <div>
+
+                    <div>
+
+                        <h3>Priority Levels</h3>
+
+                        <div class="role-card">
+
+                            <p>
+                                <strong>Low</strong><br>
+                                Minor issue with little or no business impact.
+                                Users can continue working while the issue is addressed.
+                            </p>
+
+                            <hr>
+
+                            <p>
+                                <strong>Medium</strong><br>
+                                Affects one user or a small group.
+                                Work is interrupted but the issue is not business critical.
+                            </p>
+
+                            <hr>
+
+                            <p>
+                                <strong>High</strong><br>
+                                Affects multiple users, an entire department, or a critical business service.
+                                Requires immediate attention to minimize business impact.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+        </section>
+
+
+        <section class="project-section">
+
+            <h2>Ticket Status Lifecycle</h2>
+
+            <div class="role-grid">
+
+                <div class="role-card">
+                    <h4>New</h4>
+                    <p>Ticket has been submitted.
+                    </p>
+                </div>
+
+                <div class="role-card">
+                    <h4>Open / Assigned</h4>
+                    <p>Ticket has been picked up and assigned to a technician. Greet the user and confirm
+                        identity/device.
+                    </p>
+                </div>
+
+
+                <div class="role-card">
+                    <h4>In Progress</h4>
+                    <p>Technician is actively working the issue, asking questions and gathering info (when did it start,
+                        what changed, and the last
+                        time it worked).
+                    </p>
+                </div>
+
+
+                <div class="role-card">
+                    <h4>Troubleshooting</h4>
+                    <p>Technician is applying fixes, starting with the simplest solution before moving to more complex
+                        ones.
+                    </p>
+                </div>
+
+                <div class="role-card">
+                    <h4>Waiting / On Hold</h4>
+                    <p>Waiting on more info, confirmation, or action from the user.</p>
+                </div>
+
+                <div class="role-card">
+                    <h4>Escalated</h4>
+                    <p>If unsolved, the ticket is passed to a higher tier or specialized team, along with notes on
+                        what's already been tried, for advanced
+                        troubleshooting.</p>
+                </div>
+
+                <div class="role-card">
+                    <h4>Resolved</h4>
+                    <p>The issue has been fixed and awaits user confirmation.</p>
+                </div>
+
+                <div class="role-card">
+                    <h4>Documentation & Ticket Closure</h4>
+                    <p>Document everything: what was tried, what fixed the issue, and what to do if it happens again.
+                        <br>
+                        Then close the ticket.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="project-section">
+            <h2>Ticket Submission: Sofia Sends a Ticket</h2>
+
+            <p>
+                For this demonstration, <strong>Sofia Diaz</strong> submitted a support request
+                through the Spiceworks self-service portal after experiencing an Outlook sign-in issue.
+                The ticket included an issue summary, detailed description, priority level,
+                and category before being assigned for investigation.
+            </p>
+
+            <div class="lab-gallery">
+
+                <figure>
+                    <img src="./spiceworks/tk1.jpg" alt="Organization Support Portal">
+                    <figcaption>
+                        Here are the organization's details, including ticket emails and support portal links where
+                        employees can submit IT support tickets.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="./spiceworks/tk3.jpg" alt="User Ticket Submission">
+                    <figcaption>
+                        Sofia submits a support ticket through the organization's self-service portal.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="./spiceworks/tk4.jpg" alt="Technician Creates Ticket">
+                    <figcaption>
+                        An IT support technician can also create a ticket on behalf of a user, such as after receiving a
+                        phone call.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <section class="project-section">
+
+            <h2>Ticket Assignment & User Verification</h2>
+
+            <p>
+                After receiving the ticket, I assigned it to myself and acknowledged the request.
+                I then asked the user to verify their identity so I could locate their account by
+                confirming the following information:
+            </p>
+
+            <ul class="bullet-list">
+
+                <li>Full Name</li>
+
+                <li>Department</li>
+
+                <li>Email Address</li>
+
+            </ul>
+
+
+            <div class="lab-gallery">
+                <img src="./spiceworks/tk4.4.jpg">
+                <img src="./spiceworks/tk5.jpg">
+
+
+
+            </div>
+
+        </section>
+
+
+        <section class="project-section">
+
+            <h2>Asking Questions & Narrowing Down the Issue
+            </h2>
+
+            <p>
+                The possible root cause of this issue could be anything — it could be an update we made in our
+                organization recently,
+                internet being down, an incorrect password, an issue with the application itself, or maybe missing
+                licenses. So before making any account changes, I gathered additional information to help eliminate
+                possible causes and determine
+                the root cause of the issue.
+            </p>
+
+            <ul class="bullet-list">
+
+                <li>When did the issue begin?</li>
+                <li>Is anyone else having the same issue?</li>
+                <li>Can the user access other websites?</li>
+                <li>Has the password recently been changed?</li>
+                <li>Is Outlook being accessed through the desktop app or web browser?</li>
+                <li>Can the user access Teams or other MS365 apps?</li>
+                <li>Have any recent changes been made to the Microsoft 365 account?</li>
+
+            </ul>
+
+            <p>
+                These questions helped determine whether the issue was related to internet
+                connectivity, authentication, Outlook itself, Microsoft 365 services,
+                or the user's account configuration.
+            </p>
+
+            <div class="lab-gallery">
+
+                <img src="./spiceworks/tk6.jpg">
+                <img src="./spiceworks/tk7.jpg">
+
+
+            </div>
+
+        </section>
+
+
+        <section class="project-section">
+
+            <h2>Internal Documentation</h2>
+
+            <p>
+                Based on the user's responses, I documented my findings using an internal
+                note. Sofia stated she was unable to use MS365 apps. Since multiple Microsoft 365 services were
+                affected,
+                the evidence suggested the issue could be related to the user's Microsoft 365
+                account rather than Outlook alone.
+            </p>
+
+            <div class="lab-gallery">
+
+                <img src="./spiceworks/tk8.jpg">
+
+
+            </div>
+
+        </section>
+
+
+        <section class="project-section">
+
+            <h2>Investigation and Troubleshooting</h2>
+
+            <p>
+                I opened the Microsoft 365 Admin Center and navigated to
+                <strong>Users → Active Users → Sofia Diaz</strong>.
+                During the investigation, I discovered that the user's
+                <strong>Microsoft 365 Business Premium</strong> license had been removed.
+                Without an assigned license, Outlook, Exchange Online, Teams,
+                OneDrive, and other Microsoft 365 services were unavailable.
+            </p>
+
+            <p>
+                I reassigned the Microsoft 365 Business Premium license to restore access.
+            </p>
+
+            <div class="lab-gallery">
+
+                <img src="./spiceworks/tk9.jpg">
+                <img src="./spiceworks/tk10.jpg">
+
+            </div>
+
+            </section>
+
+            <section class="project-section">
+
+                <h2>Confirming Resolution</h2>
+                <p>
+                    After reassigning the license, I informed the user that she was missing the Microsoft 365 Business
+                    Premium license and
+                    asked her to give it some time and sign in again.
+                    The user confirmed that Outlook and other Microsoft 365 applications
+                    were working again.
+                </p>
+
+                <div class="lab-gallery">
+                    <img src="./spiceworks/tk11.jpg">
+                    <img src="./spiceworks/tk12.jpg">
+                </div>
+
+
+
+            </section>
+
+
+            <section class="project-section">
+
+                <h2>Ticket Closure</h2>
+
+                <p>
+                    Before closing the incident, I documented the root cause, troubleshooting steps,
+                    and verification that the issue had been successfully resolved.
+                    Complete documentation ensures future technicians have a clear record of the
+                    incident if additional support is ever required or if the same problem occurs again.
+                </p>
+
+                <ul class="bullet-list">
+
+                    <li>Root Cause Identified</li>
+
+                    <li>Resolution Documented</li>
+
+                    <li>User Verified Successful Sign-In</li>
+
+                    <li>Ticket Closed</li>
+
+                </ul>
+
+                <div class="lab-gallery">
+
+                    <img src="./spiceworks/tk13.jpg">
+                    <img src="./spiceworks/tk14.jpg">
+
+                </div>
+
+            </section>
+
+            <section class="project-section">
+
+                <h2>Outcome</h2>
+
+                <div class="policy-box">
+
+                    <p><strong>Root Cause:</strong> Microsoft 365 Business Premium license had been removed from the
+                        user's
+                        account.</p>
+
+                    <p><strong>Resolution:</strong> Reassigned the Microsoft 365 Business Premium license through the
+                        Microsoft 365 Admin Center.</p>
+
+                    <p><strong>Verification:</strong> Confirmed the user successfully accessed Outlook, Teams, OneDrive,
+                        and
+                        other Microsoft 365 services after the license was reassigned.</p>
+
+                </div>
+
+            </section>
+
+            <section class="project-section">
+
+                <h2>Key Takeaways</h2>
+
+                <ul class="bullet-list">
+
+                    <li>Follow a structured troubleshooting process before making administrative changes.</li>
+
+                    <li>Verify the user's identity before modifying account settings.</li>
+
+                    <li>Document every troubleshooting step using internal technician notes.</li>
+
+                    <li>Maintain clear communication with end users throughout the incident.</li>
+
+                    <li>Verify that the issue is fully resolved before closing the ticket.</li>
+
+                    <li>No escalation was needed in this case, but recognize when an issue can be resolved independently
+                        versus when escalation is required.</li>
+
+                </ul>
+
+            </section>
+    </main>
+
+
+
+
+    <footer class="site-footer">
+        <p>© 2026 TechSpace</p>
+        <p class="footer-sub">Cloud • Identity • Security Labs</p>
+        <p class="site-disclaimer">
+            Images used in this portfolio is for educational and demonstration purposes only.
+    </footer>
+
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
