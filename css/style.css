@@ -1327,3 +1327,26 @@ body {
 }
 
 }
+
+.project-btn{
+    display:inline-block;
+    padding:12px 22px;
+    background:#bfe2ff;
+    color:#ffffff;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.2s;
+    display: inline-block;
+
+}
+
+.project-btn:hover{
+    background:#90c9f9;
+
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-top: 25px;
+}
+
