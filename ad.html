@@ -2,267 +2,580 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>welcome to my tech space</title>
-  <link rel="stylesheet" href="./css/style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Active Directory Lab | Tech Space</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
 
-  <nav class="navbar">
-    <div class="nav-container">
+<nav class="navbar">
 
-      <a href="index.html" class="logo">Tech Space</a>
+<div class="nav-container">
 
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="projects.html">projects</a></li>
-      </ul>
+<a href="index.html" class="logo">TechSpace</a>
 
-    </div>
-  </nav>
+<ul>
+<li><a href="index.html">home</a></li>
+<li><a href="about.html">about</a></li>
+<li><a href="projects.html">projects</a></li>
+</ul>
+
+</div>
+
+</nav>
 
 
-  <h1 class="lab-title">Active Directory Lab – Implementation Steps</h1>
+<!-- INTRO -->
 
-  <!-- STEP 1 -->
-  <div class="lab-card">
-    <h2>1. Domain Controller Deployment</h2>
+<section class="project-container">
+
+<h1><span class="gold-text">Active Directory</span> Environment</h1>
+
+
+<p class="project-intro">
+
+This lab demonstrates the deployment and administration of a simulated enterprise
+Active Directory environment using Windows Server 2022.
+
+I created a fictional organization called <strong>Company.local</strong> to mirror how
+small and medium-sized businesses manage centralized identity, authentication,
+security policies, and client computers.
+
+Throughout this project I deployed Active Directory Domain Services (AD DS),
+designed an Organizational Unit structure, created users and security groups,
+configured Group Policy Objects (GPOs), managed DNS and DHCP,
+and joined Windows clients to the domain.
+
+</p>
+
+
+        <div class="tech-stack">
+
+<span>Windows Server 2022</span>
+<span>Active Directory DS</span>
+<span>DNS</span>
+<span>DHCP</span>
+<span>Group Policy</span>
+<span>PowerShell</span>
+<span>Domain Controller</span>
+<span>Domain Join</span>
+<span>Users & Groups</span>
+<span>Organizational Units</span>
+<span>Identity Management</span>
+
+</div>
+
+</section>
+
+
+<!-- SECTION 1 -->
+
+<section class="project-section">
+
+<h2><span class="gold-text">Server Deployment</span> & Domain Controller</h2>
+
+<p>
+
+I began by deploying a Windows Server 2022 virtual machine and installing
+Active Directory Domain Services (AD DS). After installation, the server
+was promoted to a Domain Controller by creating a new Active Directory forest
+named <strong>company.local</strong>.
+
+</p>
+
+<p>
+
+Creating a dedicated forest establishes the foundation for centralized
+authentication, authorization, and identity management. In enterprise
+environments, every user, computer, and security policy depends on
+the Domain Controller.
+
+</p>
+
+<div class="lab-gallery">
+
+<img src="./AD pics/1.png" alt="Windows Server">
+
+<img src="./AD pics/2.png" alt="Install AD DS">
+
+<img src="./AD pics/3.png" alt="Domain Controller">
+
+</div>
+
+</section>
+
+
+
+<!-- SECTION 2 -->
+
+<section class="project-section">
+
+<h2><span class="gold-text">Organizational Unit</span> Design</h2>
+
+<p>
+
+Instead of placing every user inside a single container,
+I created separate Organizational Units (OUs) for each department.
+
+</p>
+
+<p>
+
+This structure reflects how enterprise environments organize users.
+Department-based OUs simplify administration, allow Group Policies to
+be targeted more efficiently, and make delegated administration easier
+as organizations grow.
+
+</p>
+
+<p>
+
+Each user was also configured with
+<strong>"User must change password at next logon"</strong>,
+allowing employees to establish their own secure password while preventing
+administrators from knowing permanent credentials.
+
+</p>
+
+<div class="lab-gallery">
+
+<img src="./AD pics/5.png">
+
+<img src="./AD pics/6.png">
+
+<img src="./AD pics/7.png">
+
+<img src="./AD pics/8.png">
+
+</div>
+
+</section>
+
+
+
+<!-- SECTION 3 -->
+
+<section class="project-section">
+
+<h2><span class="gold-text">User & Security Group</span> Management</h2>
+<p>
+
+After creating departmental users,
+I organized permissions using Security Groups.
+
+Rather than assigning permissions directly to individual users,
+enterprise administrators typically assign permissions to groups,
+then place users inside those groups.
+
+</p>
+
+<p>
+
+This approach follows Role-Based Access Control (RBAC),
+making administration more scalable and reducing future maintenance.
+
+</p>
+
+<div class="lab-gallery">
+
+<img src="./AD pics/10.png">
+
+<img src="./AD pics/11.png">
+
+<img src="./AD pics/12.png">
+
+</div>
+
+<p>
+
+Users were then assigned to the appropriate departmental groups,
+allowing access permissions to be inherited automatically.
+
+</p>
+
+<div class="lab-gallery">
+
+<img src="./AD pics/13.png">
+
+<img src="./AD pics/14.png">
+
+<img src="./AD pics/15.png">
+
+</div>
+
+</section>
+
+
+
+<!-- SECTION 4 -->
+
+<section class="project-section">
+
+<h2><span class="gold-text">Group Policy</span> Configuration</h2>
+<p>
+
+Group Policy allows administrators to centrally configure security,
+desktop settings, and operating system behavior without manually
+configuring every computer.
+
+In enterprise environments,
+this ensures every device follows consistent security standards.
+
+</p>
+
+
+<div class="membership-grid">
+
+<div class="membership-box">
+
+<h3>User Configuration</h3>
+
+<p>
+
+Applies policies directly to user accounts regardless of which
+computer they log into.
+
+</p>
+
+</div>
+
+
+<div class="membership-box">
+
+<h3>Computer Configuration</h3>
+
+<p>
+
+Applies policies to the device itself,
+regardless of which user signs in.
+
+</p>
+
+</div>
+
+
+<div class="membership-box">
+
+<h3>Policies vs Preferences</h3>
+
+<p>
+
+Policies enforce security settings,
+while Preferences provide default configurations
+that users may later modify.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<h3>Lab Implementation</h3>
+
+<p>
+
+To demonstrate centralized user management,
+I configured a User Configuration policy
+that prevents users from opening Control Panel.
+
+This represents a common enterprise restriction
+used to prevent unauthorized system changes.
+
+</p>
+
+<div class="gpo-highlight">
+
+Prohibit access to Control Panel
+
+</div>
+
+<div class="lab-gallery">
+
+<img src="./AD pics/19.png">
+
+<img src="./AD pics/20.png">
+
+<img src="./AD pics/21.png">
+
+</div>
+
+
+
+<p>
+
+I also configured an Account Lockout Policy
+under Computer Configuration to automatically
+lock user accounts after multiple failed login attempts.
+
+This helps reduce password guessing attacks
+and improves overall account security.
+
+</p>
+
+<div class="gpo-highlight">
+
+Account Lockout Policy
+
+</div>
+
+<div class="lab-gallery">
+
+<img src="./AD pics/22.png">
+
+<img src="./AD pics/23.png">
+
+</div>
+
+</section>
+
+<!-- POLICY VERIFICATION -->
+
+<section class="project-section">
+
+<h2><span class="gold-text">Policy Verification</span> & Testing</h2>
+
     <p>
-      I began by creating a virtual machine running Windows Server 2025
-      Datacenter Azure Edition in Microsoft Azure to serve as the Domain Controller.
+
+        After configuring the Group Policies, I forced the client computer to
+        retrieve the latest policies from the Domain Controller using:
+
     </p>
 
+    <div class="code-block">
+
+        <code>gpupdate /force</code>
+        <code>gpresult /r</code>
+
+    </div>
+
     <p>
-      After deployment, I installed Active Directory Domain Services (AD DS),
-      promoted the server to a Domain Controller, and created a new forest:
-      <strong>company.local</strong>.
+
+        The policy refresh completed successfully and <strong>gpresult</strong>
+        confirmed that both the User Configuration and Computer Configuration
+        policies were being applied to the client computer.
+
     </p>
 
     <div class="lab-gallery">
-      <img src="./AD pics/1.png" alt="VM Creation">
-      <img src="./AD pics/2.png" alt="AD DS Installation">
-      <img src="./AD pics/3.png" alt="Domain Promotion">
-    </div>
-  </div>
 
-
-  <!-- STEP 2 -->
-  <div class="lab-card">
-    <h2>2. Organizational Unit (OU) Structure</h2>
-    <p>
-      Under company.local, I created Branch 1 with Users, Computers, Servers,
-      and Groups OUs. Inside Users, I created nested department OUs.
-    </p>
-
-    <p>
-      This structure improves organization, simplifies GPO application,
-      and enables delegation of administrative control.
-    </p>
-
-    <p>While creating the users, I also selected 'User must change password at next logon.' This allows users to safely
-      set their own password, which only they should know. </p>
-
-    <div class="lab-gallery">
-      <img src="./AD pics/5.png" alt="OU Structure">
-      <img src="./AD pics/6.png" alt="Nested OUs">
-      <img src="./AD pics/7.png" alt="User Creation">
-      <img src="./AD pics/8.png" alt="User Creation">
-
-    </div>
-  </div>
-
-
-  <!-- STEP 3 -->
-  <div class="lab-card">
-    <h2>3. Security Groups & RBAC</h2>
-    <p>
-      I created Security Groups to implement role-based access control (RBAC).
-      Security Groups control access to resources such as file shares and GPO filtering.
-    </p>
-
-    <p>
-      Distribution Groups are used for email only and cannot assign permissions.
-    </p>
-
-    <div class="lab-gallery">
-      <img src="./AD pics/10.png" alt="Security Groups">
-      <img src="./AD pics/11.png" alt="RBAC Setup">
-      <img src="./AD pics/12.png" alt="RBAC Setup">
-
-    </div>
-  </div>
-
-
-  <!-- STEP 4 -->
-  <div class="lab-card">
-    <h2>4. Adding Users to Security Groups</h2>
-    <p>
-      I added the user Amalia Lee to the security group <strong>B1_IT_Users</strong>
-      to apply permissions at the group level.
-    </p>
-
-    <div class="lab-gallery">
-      <img src="./AD pics/13.png" alt="Add to Group">
-      <img src="./AD pics/14.png" alt="Group Membership Confirmation">
-      <img src="./AD pics/15.png" alt="Group Membership Confirmation">
-
-    </div>
-  </div>
-
-
-  <!-- STEP 5 – Group Policy Object (GPO) -->
-  <div class="lab-card">
-
-    <h2>5. Group Policy Object (GPO)</h2>
-
-    <p>
-      A <strong>Group Policy Object (GPO)</strong> is a collection of settings in
-      Active Directory that can be applied to domains or Organizational Units (OUs)
-      to centrally manage users and computers.
-    </p>
-
-    <div class="gpo-simple">
-
-      <div class="gpo-item">
-        <h4>Computer Configuration</h4>
-        <p>
-          Applies to the computer itself and remains the same regardless of which user logs in.
-        </p>
-      </div>
-
-      <div class="gpo-item">
-        <h4>User Configuration</h4>
-        <p>
-          Applies to user accounts and follows the user when they log in to a domain-joined device.
-        </p>
-      </div>
-
-      <div class="gpo-item">
-        <h4>Policies vs Preferences</h4>
-        <p>
-          Policies cannot be changed by users, while Preferences can be modified after deployment.
-        </p>
-      </div>
+        <img src="./AD pics/24.png" alt="gpresult Output">
 
     </div>
 
-    <h3>Lab Implementation</h3>
+</section>
+
+
+
+<!-- GPO RESULTS -->
+
+<section class="project-section">
+
+<h2><span class="gold-text">GPO</span> in Practice</h2>
 
     <p>
-      For this lab, I created a <strong>User Configuration Policies</strong> to restrict
-      access to the Control Panel by enabling:
+
+        Simply creating a Group Policy is not enough—it must be verified on the
+        client computer.
+
+    </p>
+
+    <p>
+
+        After updating Group Policy, I signed into a domain-joined workstation
+        using a standard user account. When attempting to open Control Panel,
+        access was successfully blocked by the policy configured earlier.
+
+    </p>
+
+    <p>
+
+        This demonstrates how administrators can centrally enforce security
+        restrictions without configuring each computer individually.
+
+    </p>
+
+    <!-- Replace with screenshots if you have them -->
+    <div class="gpo-highlight">
+
+        Result: Standard users were unable to access Control Panel.
+
+    </div>
+
+</section>
+
+
+
+<!-- ACCOUNT LOCKOUT -->
+
+<section class="project-section">
+
+    <h2><span>Account Lockout</span> Demonstration</h2>
+
+    <p>
+
+        To validate the Account Lockout Policy, I intentionally entered an
+        incorrect password multiple times using a standard domain account.
+
+    </p>
+
+    <p>
+
+        After exceeding the configured threshold, Active Directory automatically
+        locked the account, preventing additional authentication attempts until
+        an administrator unlocked the account.
+
+    </p>
+
+    <p>
+
+        This demonstrates how Group Policy helps protect enterprise environments
+        from password guessing and brute-force attacks.
+
     </p>
 
     <div class="gpo-highlight">
-      Prohibit access to Control Panel
-    </div>
 
-    <div class="lab-gallery">
-      <img src="./AD pics/19.png" alt="GPO Creation">
-      <img src="./AD pics/20.png" alt="Account Lockout Policy">
-      <img src="./AD pics/21.png" alt="Account Lockout Policy">
+        Result: Account locked after repeated failed authentication attempts.
 
     </div>
 
-    <p>
-      I created a <strong>Computer Configuration Policies</strong> for Account Lockout Policy
-    </p>
+    <!-- Add screenshots later if available -->
 
-    <div class="gpo-highlight">
-      Account Lockout Policy
-    </div>
-    <div class="lab-gallery">
-      <img src="./AD pics/22.png" alt="GPO Creation">
-      <img src="./AD pics/23.png" alt="Account Lockout Policy">
-
-    </div>
-
-  </div>
+</section>
 
 
 
+<!-- DNS -->
 
-  <!-- STEP 6 -->
-  <div class="lab-card">
-    <h2>6. Policy Testing & Verification</h2>
-    <p>
-      After linking the GPOs to the appropriate OUs, I tested policy enforcement
-      using:
-    </p>
+<section class="project-section">
 
-    <code>gpupdate /force</code>
-    <code>gpresult /r</code>
+<h2><span class="gold-text">DNS Configuration</span></h2>
 
-    <div class="lab-gallery">
-      <img src="./AD pics/244.png" alt="gpresult Output">
-    </div>
-  </div>
+<p>
 
+For Active Directory to function correctly, client computers must use the
+Domain Controller as their preferred DNS server.
 
-  <!-- STEP 7 -->
-  <div class="lab-card">
-    <h2>7. Network Configuration</h2>
-    <p>
-      Both machines were configured on the same subnet (255.255.255.0).
-      The Domain Controller was assigned a static IP address.
-    </p>
+</p>
 
-    <p>
-      The client DNS server was set to the Domain Controller IP.
-      Connectivity was verified using nslookup.
-    </p>
+<p>
 
-    <div class="lab-gallery">
-      <img src="./AD pics/26.jpg" alt="IP Config">
-      <img src="./AD pics/27.jpg" alt="DNS Settings">
-      <img src="./AD pics/28.png" alt="DNS Settings">
+I configured the client workstation to point directly to the Domain
+Controller's IP address and verified successful name resolution using
+<strong>nslookup</strong>.
 
-    </div>
-  </div>
+Correct DNS configuration is essential because domain authentication,
+Group Policy processing, and locating network resources all rely on DNS.
+
+</p>
+
+<div class="lab-gallery">
+
+<img src="./AD pics/26.jpg">
+
+<img src="./AD pics/27.jpg">
+
+<img src="./AD pics/28.png">
+
+</div>
+
+</section>
 
 
-  <!-- STEP 8 -->
-  <div class="lab-card">
-    <h2>8. Joining the Client to the Domain</h2>
-    <p>
-      The client machine was joined to <strong>company.local</strong>
-      using Domain Controller credentials.
-    </p>
 
-    <p>
-      After joining, IT department users can successfully log in using their domain credentials.
-    </p>
+<!-- DOMAIN JOIN -->
 
-    <div class="lab-gallery">
-      <img src="./AD pics/30.png" alt="Domain Join">
-      <img src="./AD pics/31.png" alt="Welcome to Domain">
-      <img src="./AD pics/32.png" alt="Welcome to Domain">
-      <img src="./AD pics/33.png" alt="Welcome to Domain">
+<section class="project-section">
+
+<h2><span class="gold-text">Domain Join</span> & Authentication</h2>
+
+<p>
+
+After verifying DNS connectivity,
+the Windows client computer was joined to the
+<strong>company.local</strong> domain.
+
+</p>
+
+<p>
+
+Joining the domain allows users to authenticate using centralized
+Active Directory credentials instead of local computer accounts.
+
+This enables administrators to apply security policies,
+manage user access,
+and control devices from a single location.
+
+</p>
+
+<div class="lab-gallery">
+
+<img src="./AD pics/30.png">
+
+<img src="./AD pics/31.png">
+
+<img src="./AD pics/32.png">
+
+<img src="./AD pics/33.png">
+
+</div>
+
+<p>
+
+After joining the domain,
+IT department users successfully signed into the workstation
+using their Active Directory credentials,
+confirming that authentication,
+DNS,
+and Group Policy were functioning correctly.
+
+</p>
+
+</section>
 
 
-    </div>
-  </div>
 
-  </section>
+<!-- SUMMARY -->
+
+<section class="project-section">
+
+    <h2>Key <span class="gold-text">Takeaway</span></h2>
+
+
+<ul class="takeaway-list">
+
+    <li>Deployed a Windows Server 2022 Domain Controller using AD DS.</li>
+    <li>Designed a department-based OU structure with Security Groups using RBAC principles.</li>
+    <li>Configured Group Policies to centrally manage security settings, verified using gpupdate and gpresult.</li>
+    <li>Configured DNS to support domain authentication.</li>
+    <li>Joined client computers to the domain and verified authentication.</li>
+
+</ul>
+</section>
+
 
 
   <footer class="site-footer">
     <p>© 2026 TechSpace</p>
-    <p class="footer-sub">Cloud • Identity • Security Labs</p>
+    <p class="footer-sub">IT Support • Identity • Cloud Security</p>
     <p class="site-disclaimer">
-      Images used in this portfolio is for educational and demonstration purposes only.
-  </footer>
+        Images used in this portfolio are for educational and demonstration purposes only.
+    </p>
+</footer>
 
-  <!-- Lightbox HTML -->
-  <div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-  </div>
 
-  <script src="./js/script.js"></script>
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="./js/script.js"></script>
 </body>
-
-</html>
