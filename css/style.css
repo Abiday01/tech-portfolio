@@ -80,26 +80,22 @@ img{
    NAVBAR
 =========================== */
 
+
 .navbar{
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
     padding:18px 8%;
 
     background:rgba(7,9,13,.96);
-
     backdrop-filter:blur(12px);
 
     border-bottom:1px solid rgba(255,255,255,.05);
 
     position:sticky;
-
     top:0;
-
     z-index:999;
 
 }
@@ -109,9 +105,7 @@ img{
     color:var(--gold);
 
     font-size:1.7rem;
-
     font-weight:700;
-
     letter-spacing:.5px;
 
 }
@@ -119,7 +113,6 @@ img{
 nav ul{
 
     display:flex;
-
     gap:40px;
 
     list-style:none;
@@ -131,7 +124,6 @@ nav a{
     color:#d6dae2;
 
     font-size:.95rem;
-
     font-weight:500;
 
     text-transform:capitalize;
@@ -143,6 +135,81 @@ nav a{
 nav a:hover{
 
     color:var(--gold);
+
+}
+
+/* Hide hamburger on desktop */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+    border:none;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    nav ul{
+
+        position:absolute;
+
+        top:75px;
+        left:0;
+
+        width:100%;
+
+        background:#11151d;
+
+        display:none;
+
+        flex-direction:column;
+
+        gap:0;
+
+        border-top:1px solid #2b2636;
+
+    }
+
+    nav ul.active{
+
+        display:flex;
+
+    }
+
+    nav ul li{
+
+        width:100%;
+
+        border-bottom:1px solid rgba(255,255,255,.05);
+
+    }
+
+    nav ul li a{
+
+        display:block;
+
+        padding:18px;
+
+        text-align:center;
+
+    }
 
 }
 
