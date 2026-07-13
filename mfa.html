@@ -14,7 +14,7 @@
   <nav class="navbar">
     <div class="nav-container">
 
-      <a href="index.html" class="logo">Tech Space</a>
+      <a href="index.html" class="logo">TechSpace</a>
 
       <ul>
         <li><a href="index.html">home</a></li>
@@ -25,264 +25,367 @@
     </div>
   </nav>
 
+
+
+
   <section class="project-container">
 
 
-    <h1 class="project-title">Multi-Factor Authentication (MFA) Implementation</h1>
-
+<h1 class="project-title"><span class="gold-text">Multi-Factor Authentication</span> Implementation</h1>
     <p class="project-intro">
       Passwords alone are not enough. A single compromised password can allow attackers
       to access an entire account. Multi-Factor Authentication (MFA) adds an additional
       layer of security that helps protect user identities even when passwords are stolen.
     </p>
+    <div class="tech-stack">
 
+    <span>Microsoft Entra ID</span>
 
-    <div class="project-card">
+    <span>Microsoft Authenticator</span>
 
-      <h2> Passwords Alone Are Not Enough</h2>
+    <span>Multi-Factor Authentication</span>
 
-      <p>
-        User credentials are frequently stolen through:</p>
+    <span>Identity Security</span>
 
-      <ul class="security-list">
-        <li>Phishing emails</li>
-        <li>Data breaches</li>
-        <li>Credential stuffing attacks</li>
-        <li>Fake login pages designed to mimic legitimate services</li>
-      </ul>
+    <span>Zero Trust</span>
 
-      <p>
-        If an attacker steals only a password, they may gain access immediately.
-        However, when MFA is enabled, a second authentication factor is required,
-        preventing unauthorized access.
-      </p>
+    <span>Passwordless Authentication</span>
 
-    </div>
+    <span>QR Code Enrollment</span>
 
+    <span>User Onboarding</span>
 
-    <!-- MFA Explanation -->
-    <div class="project-card">
+    <span>Microsoft 365</span>
 
-      <h2>What is Multi-Factor Authentication (MFA)?</h2>
-
-      <p>
-        Multi-Factor Authentication verifies a user's identity using two or more
-        factors:
-      </p>
-
-      <div class="mfa-grid">
-
-        <div class="mfa-box">
-          <h3>Something You Know</h3>
-          <p>Password or PIN</p>
-        </div>
-
-        <div class="mfa-box">
-          <h3>Something You Have</h3>
-          <p>Mobile phone or authenticator app</p>
-        </div>
-
-        <div class="mfa-box">
-          <h3>Something You Are</h3>
-          <p>Biometrics such as fingerprint or facial recognition</p>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- Real World Example -->
-    <div class="project-card">
-
-      <h2>How MFA Stops Real Attacks</h2>
-
-      <ul class="security-list">
-
-        <li>
-          <strong>Data Breach:</strong>
-          An attacker obtains a password from a leaked database, but cannot log in
-          because they do not have the second authentication factor.
-        </li>
-
-        <li>
-          <strong>Phishing Attack:</strong>
-          A user accidentally enters their password on a fake login page,
-          but access is still blocked without MFA approval.
-        </li>
-
-        <li>
-          <strong>Credential Stuffing:</strong>
-          Automated login attempts fail because MFA requires user verification.
-        </li>
-
-      </ul>
-
-    </div>
-
-
-    <!-- Lab Example -->
-    <div class="project-card">
-
-      <h2>Lab Example: MFA Deployment in Microsoft Entra ID</h2>
-
-      <p>
-        As part of my Identity and Access Management lab environment, I configured
-        Multi-Factor Authentication when provisioning new users in Microsoft Entra ID.
-      </p>
-
-      <p>
-        Below is an example scenario for a new employee account.
-      </p>
-
-    </div>
-
-
-    <!-- Steps -->
-    <div class="project-card">
-
-      <h2>User Onboarding Example</h2>
-
-      <ol class="steps-list">
-
-        <li>
-          Created a new user account for <strong>Amalia (HR Department)</strong> in Microsoft Entra ID.
-        </li>
-
-        <li>
-          Assigned a temporary password and required a password change at first login.
-        </li>
-
-        <li>
-          During the first sign-in, the user was prompted to configure Multi-Factor Authentication.
-        </li>
-
-        <li>
-          The user downloaded the <strong>Microsoft Authenticator</strong> mobile application.
-        </li>
-
-        <li>
-          A QR code was scanned using the authenticator app to link the device.
-        </li>
-
-        <li>
-          A verification number was generated and entered to complete setup.
-        </li>
-
-      </ol>
-    </div>
-
-
-
-
-
-    <div class="mfa-section">
-
-      <h2>MFA Enrollment Process</h2>
-
-      <div class="mfa-gallery">
-
-        <div class="mfa-card">
-          <img src="./mfa/2.jpg">
-          <p class="mfa-caption">User prompted to configure MFA during first login</p>
-        </div>
-
-        <div class="mfa-card">
-          <img src="./mfa/33.jpg">
-          <p class="mfa-caption">User asked to download the Microsoft Authenticator app</p>
-        </div>
-
-        <div class="mfa-card">
-          <img src="./mfa/44.jpg">
-          <p class="mfa-caption">QR code scanned using Microsoft Authenticator</p>
-        </div>
-
-        <div class="mfa-card">
-          <img src="./mfa/66.jpg">
-          <p class="mfa-caption">Verification number generated</p>
-        </div>
-
-        <div class="mfa-card">
-          <img src="./mfa/111.jpg">
-          <p class="mfa-caption">User approves login via Authenticator app</p>
-        </div>
-
-        <div class="mfa-card">
-          <img src="./mfa/8.jpg">
-          <p class="mfa-caption">MFA verification completed</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- Result -->
-    <div class="project-card">
-
-      <h2>Authentication Process After MFA Setup</h2>
-
-      <p>
-        Once MFA is enabled, the login process includes two verification steps:
-      </p>
-
-      <ul class="security-list">
-
-        <li>Step 1: Enter account password</li>
-
-        <li>Step 2: Approve the sign-in request through the Microsoft Authenticator app</li>
-
-      </ul>
-
-      <p>
-        In many cases, the authenticator app itself requires biometric verification
-        such as fingerprint or facial recognition before approving the request.
-      </p>
-
-      <p>
-        This means an attacker would need access to the user's password,
-        physical device, and device unlock method.
-      </p>
-
-    </div>
-
-
-    <!-- Takeaway -->
-    <div class="project-card">
-
-      <h2>Key Security Takeaway</h2>
-
-      <p>
-        Passwords alone are no longer sufficient to protect user identities.
-        Multi-Factor Authentication is one of the most effective security
-        controls organizations can implement to reduce account compromise.
-      </p>
-
-      <p>
-        Implementing MFA significantly improves identity security and protects
-        against many of the most common attack methods used today.
-      </p>
-
-    </div>
-
+</div>
   </section>
 
 
 
+
+
+
+
+
+
+<section class="project-section">
+
+    <h2><span>Passwords</span> Alone Are Not Enough</h2>
+
+    <p>
+        Passwords remain one of the weakest points in identity security.
+        Even strong passwords can be stolen through phishing attacks,
+        credential stuffing, malware, or large-scale data breaches.
+    </p>
+
+    <div class="role-grid">
+
+        <div class="role-card">
+            <h4>Phishing</h4>
+            <p>Fake sign-in pages trick users into revealing credentials.</p>
+        </div>
+
+        <div class="role-card">
+            <h4>Data Breaches</h4>
+            <p>Previously leaked passwords are reused across multiple services.</p>
+        </div>
+
+        <div class="role-card">
+            <h4>Credential Stuffing</h4>
+            <p>Automated tools test stolen usernames and passwords against many websites.</p>
+        </div>
+
+        <div class="role-card">
+            <h4>Social Engineering</h4>
+            <p>Attackers manipulate users into revealing passwords or approving sign-in requests.</p>
+        </div>
+
+    </div>
+
+    <p>
+        Multi-Factor Authentication reduces this risk by requiring a second form
+        of verification before access is granted.
+    </p>
+
+</section>
+<section class="project-section">
+
+<h2>What is <span>Multi-Factor Authentication</span>?</h2>
+
+<p>
+MFA verifies a user's identity using two or more authentication factors.
+Instead of relying only on a password, access requires an additional
+verification method that significantly reduces the risk of account compromise.
+</p>
+
+<div class="role-grid">
+
+<div class="role-card">
+<h4>Something You Know</h4>
+<p>Password or PIN</p>
+</div>
+
+<div class="role-card">
+<h4>Something You Have</h4>
+<p>Microsoft Authenticator app or mobile device</p>
+</div>
+
+<div class="role-card">
+<h4>Something You Are</h4>
+<p>Fingerprint, Face ID, or Windows Hello biometrics</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="project-section">
+
+<h2>How <span>MFA</span> Stops Real Attacks</h2>
+
+<p>
+Even if a password is compromised, attackers still cannot access the account
+without completing the second authentication factor.
+</p>
+
+<div class="role-grid">
+
+<div class="role-card">
+<h4>Data Breach</h4>
+
+<p>
+An attacker obtains a leaked password but cannot complete the Microsoft
+Authenticator approval request.
+</p>
+
+</div>
+
+<div class="role-card">
+
+<h4>Phishing</h4>
+
+<p>
+A password is entered into a fake Microsoft sign-in page, but login is blocked
+because MFA approval is still required.
+</p>
+
+</div>
+
+<div class="role-card">
+
+<h4>Credential Stuffing</h4>
+
+<p>
+Automated password attacks fail because every successful password still
+requires user verification.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="project-section">
+
+    <h2><span>Lab</span> Scenario</h2>
+
+    <p>
+        To demonstrate MFA deployment in a real enterprise environment,
+        I provisioned a new employee account in Microsoft Entra ID and
+        walked through the complete first-time enrollment process using
+        Microsoft Authenticator.
+    </p>
+
+    <p>
+        This simulates the onboarding experience a new employee would
+        encounter when signing into Microsoft 365 for the first time.
+    </p>
+
+    <div class="role-grid">
+
+        <div class="role-card">
+            <h4>User</h4>
+            <p>Amalia (Human Resources)</p>
+        </div>
+
+        <div class="role-card">
+            <h4>Identity Platform</h4>
+            <p>Microsoft Entra ID</p>
+        </div>
+
+        <div class="role-card">
+            <h4>Authentication Method</h4>
+            <p>Microsoft Authenticator App</p>
+        </div>
+
+        <div class="role-card">
+            <h4>Objective</h4>
+            <p>Enroll MFA before granting access to Microsoft 365 resources.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="project-section">
+
+<h2>User <span>Onboarding</span> Process</h2>
+
+<p>
+The following workflow demonstrates how MFA was configured during
+the user's first sign-in.
+</p>
+
+<div class="role-grid">
+
+<div class="role-card">
+<h4>Step 1</h4>
+<p>Create the user account in Microsoft Entra ID.</p>
+</div>
+
+<div class="role-card">
+<h4>Step 2</h4>
+<p>Assign a temporary password and require a password change.</p>
+</div>
+
+<div class="role-card">
+<h4>Step 3</h4>
+<p>User signs in for the first time and is prompted to register MFA.</p>
+</div>
+
+<div class="role-card">
+<h4>Step 4</h4>
+<p>Download Microsoft Authenticator.</p>
+</div>
+
+<div class="role-card">
+<h4>Step 5</h4>
+<p>Scan the QR code to register the mobile device.</p>
+</div>
+
+<div class="role-card">
+<h4>Step 6</h4>
+<p>Approve the verification request to complete enrollment.</p>
+</div>
+
+</div>
+
+</section>
+<section class="project-section">
+
+<h2>MFA <span>Enrollment</span> Process</h2>
+
+<p>
+The screenshots below show the complete enrollment process
+from first sign-in through successful MFA registration.
+</p>
+
+<div class="lab-gallery">
+
+<figure>
+<img src="./mfa/2.jpg">
+<figcaption>User prompted to configure Multi-Factor Authentication.</figcaption>
+</figure>
+
+<figure>
+<img src="./mfa/33.jpg">
+<figcaption>Microsoft Authenticator application required.</figcaption>
+</figure>
+
+<figure>
+<img src="./mfa/44.jpg">
+<figcaption>QR code scanned to register the device.</figcaption>
+</figure>
+
+<figure>
+<img src="./mfa/66.jpg">
+<figcaption>Verification code displayed during enrollment.</figcaption>
+</figure>
+
+<figure>
+<img src="./mfa/111.jpg">
+<figcaption>User approves the authentication request.</figcaption>
+</figure>
+
+<figure>
+<img src="./mfa/8.jpg">
+<figcaption>MFA registration completed successfully.</figcaption>
+</figure>
+
+</div>
+
+</section>
+<section class="project-section">
+
+<h2><span>Authentication</span> Flow After Enrollment</h2>
+
+<p>
+After enrollment, every sign-in requires both the user's password
+and approval through Microsoft Authenticator before access is granted.
+</p>
+
+<div class="role-grid">
+
+<div class="role-card">
+<h4>Step 1</h4>
+<p>User enters Microsoft 365 username and password.</p>
+</div>
+
+<div class="role-card">
+<h4>Step 2</h4>
+<p>Microsoft Entra ID sends an authentication request to the registered mobile device.</p>
+</div>
+
+<div class="role-card">
+<h4>Step 3</h4>
+<p>User approves the sign-in using Microsoft Authenticator, often protected by fingerprint or Face ID.</p>
+</div>
+
+</div>
+
+<p>
+This layered authentication model means an attacker would need access to
+the user's password, registered device, and biometric or device PIN before
+successfully signing in.
+</p>
+
+</section>
+
+
+
+
+
+<section class="project-section">
+
+    <h2>Key <span class="gold-text">Takeaway</span></h2>
+
+    <ul class="takeaway-list">
+
+        <li>Passwords alone are no longer sufficient to protect user identities.</li>
+
+        <li>Multi-Factor Authentication is one of the most effective security controls organizations can implement to reduce account compromise.</li>
+
+        <li>Implementing MFA significantly improves identity security and protects against many of the most common attack methods used today.</li>
+
+    </ul>
+
+</section>
+
+
   <footer class="site-footer">
     <p>© 2026 TechSpace</p>
-    <p class="footer-sub">Cloud • Identity • Security Labs</p>
+    <p class="footer-sub">IT Support • Identity • Cloud Security</p>
     <p class="site-disclaimer">
-      Images used in this portfolio is for educational and demonstration purposes only.
-  </footer>
-
-  <div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-  </div>
-
-  <script src="./js/script.js"></script>
+        Images used in this portfolio are for educational and demonstration purposes only.
+    </p>
+</footer>
 
 
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="./js/script.js"></script>
 </body>
-
-</html>
