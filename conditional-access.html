@@ -14,7 +14,7 @@
   <nav class="navbar">
     <div class="nav-container">
 
-      <a href="index.html" class="logo">Tech Space</a>
+      <a href="index.html" class="logo">TechSpace</a>
 
       <ul>
         <li><a href="index.html">home</a></li>
@@ -26,12 +26,11 @@
   </nav>
 
 
-
-
   <section class="project-container">
 
-    <h1 class="project-title">Conditional Access & Identity Security (Microsoft Entra ID)</h1>
-
+<h1 class="project-title">
+    <span class="gold-text">Conditional Access</span> & Zero Trust Security
+</h1>
     <p class="project-intro">
       In this lab, I designed and implemented Conditional Access policies in Microsoft Entra ID to secure a cloud-based
       identity environment.
@@ -39,44 +38,107 @@
       identity protection,
       and analyzing authentication behavior through security logs.
     </p>
+    <div class="tech-stack">
+
+    <span>Microsoft Entra ID</span>
+
+    <span>Conditional Access</span>
+
+    <span>Microsoft 365</span>
+
+    <span>Identity Protection</span>
+
+    <span>Zero Trust</span>
+
+    <span>MFA</span>
+
+    <span>Authentication Strength</span>
+
+    <span>RBAC</span>
+
+    <span>Session Controls</span>
+
+    <span>Legacy Authentication</span>
+
+    <span>Sign-in Logs</span>
+
+    <span>Audit Logs</span>
+
+</div>
 
   </section>
 
 
   <section class="project-section">
 
-    <h2>Objectives</h2>
+    <h2><span class="gold-text">Objectives</h2>
 
-    <ul class="bullet-list">
+
+    <!-- <ul class="bullet-list">
       <li>Design and implement Conditional Access policies based on identity risk and role sensitivity</li>
       <li>Enforce multi-factor authentication (MFA) and advanced authentication strength policies</li>
       <li>Apply Role-Based Access Control (RBAC) and least privilege principles</li>
       <li>Validate authentication flows across different user personas</li>
       <li>Analyze sign-in and audit logs for security monitoring and investigation</li>
-    </ul>
+    </ul> -->
+    <!-- <h2><span>Security</span> Challenge</h2> -->
+
+<p>
+
+Before Conditional Access was implemented, any user with valid credentials
+could attempt to sign in from virtually any location or device.
+Although passwords alone provide one layer of protection, compromised
+credentials remain one of the most common attack vectors against cloud
+identity environments.
+
+</p>
+
+<p>
+
+The goal of this lab was to strengthen identity security by introducing
+Conditional Access policies that continuously evaluate sign-in risk,
+user role, authentication strength, and location before access is granted,
+following Microsoft's Zero Trust security model.
+
+</p>
 
   </section>
 
 
   <section class="project-section">
 
-    <h2>Environment & Roles</h2>
+<h2>Environment & <span class="gold-text">Roles</span></h2>
 
     <div class="role-grid">
 
       <div class="role-card">
         <h4>Sofia (Standard User)</h4>
-        <p>Baseline access used to validate default Conditional Access enforcement, basic MFA policy</p>
+        <p>Baseline access used to validate default Conditional Access enforcement, basic MFA policy <br> <br>
+         
+                Sofia represents a typical end user with standard business access. Since most breaches start
+                with an everyday account being compromised, she was used to validate that baseline protections
+                like MFA apply to everyone, not just privileged accounts.
+            </p>
       </div>
 
       <div class="role-card">
-        <h4>Jordan (IT Operations)</h4>
-        <p>Elevated access with layered policies and session controls</p>
+        <h4>Jordan - IT Operations administrator.</h4> 
+        <p>Elevated access with layered policies and session controls <br> <br>
+
+This role performs privileged administrative work,
+additional controls such as MFA and session restrictions were applied
+to reduce the impact of compromised credentials.</p>
       </div>
 
       <div class="role-card">
         <h4>Amelia (Privileged Administrator)</h4>
-        <p>High-risk account requiring phishing-resistant authentication</p>
+        <p>High-risk account requiring phishing-resistant authentication <br><br>
+
+           Amelia represents a Global Administrator with the highest level of access in the tenant. Since
+                a compromised admin account could affect the entire organization, phishing-resistant
+                authentication was required for her specifically, not just password + MFA, to prevent
+                credential theft from leading to full environment compromise.
+              </p>
       </div>
 
     </div>
@@ -84,35 +146,141 @@
   </section>
 
 
-  <!-- POLICIES -->
-  <section class="project-section">
 
-    <h2>Conditional Access Policy Design</h2>
 
-    <div class="policy-box">
-      <p><strong>All Users:</strong> Enforced multi-factor authentication (MFA)</p>
-      <p><strong>IT Operations:</strong> MFA + session controls (sign-in frequency: 3 hours)</p>
-      <p><strong>Privileged Administrators:</strong> Required phishing-resistant MFA (authentication strength)</p>
-      <p><strong>All Users:</strong> Blocked legacy authentication (POP/IMAP and non-modern protocols)</p>
-      <p><strong>All Users:</strong> Blocked high-risk sign-ins based on identity protection signals</p>
-      <p><strong>Location-Based Policy:</strong> Access blocked from all countries except the United States</p>
+<section class="project-section">
+
+<h2>Conditional Access <span class="gold-text">Policy Design</span></h2>
+
+    <p>
+        I designed separate Conditional Access policies based on each user's role
+        and level of privilege. Rather than applying identical controls to every
+        account, policies were layered to provide stronger protection for
+        administrative accounts while maintaining usability for standard users.
+    </p>
+
+
+        <!-- <div class="role-card">
+            <h4>All Users</h4>
+            <p>
+                Required Multi-Factor Authentication (MFA) for all cloud sign-ins
+                to verify user identity beyond a password.
+            </p>
+        </div>
+
+        <div class="role-card">
+            <h4>IT Operations</h4>
+            <p>
+                Applied MFA together with a 3-hour sign-in frequency to reduce
+                the risk of long-lived privileged sessions.
+            </p>
+        </div>
+
+        <div class="role-card">
+            <h4>Privileged Admins</h4>
+            <p>
+                Required Authentication Strength policies for privileged accounts
+                to enforce stronger authentication methods.
+            </p>
+        </div>
+
+        <div class="role-card">
+            <h4>Organization Protection</h4>
+            <p>
+                Blocked legacy authentication and configured geographic access
+                restrictions to reduce the organization's attack surface.
+            </p>
+        </div>
+
+    </div> -->
+
+
+
+
+
+    
+
+    <div class="role-grid">
+
+    <div class="role-card">
+        <h4>All Users</h4>
+        <p>
+            Required Multi-Factor Authentication (MFA) for every cloud sign-in,
+            adding an additional layer of identity verification beyond passwords.
+        </p>
     </div>
 
-    <!-- IMAGES -->
+    <div class="role-card">
+        <h4>IT Operations</h4>
+        <p>
+            Required an <strong>Authentication Strength</strong> policy together
+            with a 3-hour sign-in frequency. This ensured IT staff could only
+            authenticate using approved MFA methods while reducing the risk of
+            long-lived privileged sessions.
+        </p>
+    </div>
+
+    <div class="role-card">
+        <h4>Global Administrator</h4>
+        <p>
+            Required <strong>phishing-resistant MFA</strong> to protect the
+            highest privileged account. This policy allows only phishing-resistant
+            authentication methods, such as <strong>FIDO2 Security Keys</strong>
+            or <strong>Windows Hello for Business</strong>, providing stronger
+            protection against credential theft and phishing attacks.
+        </p>
+    </div>
+
+    <div class="role-card">
+        <h4>Organization Protection</h4>
+        <p>
+            Blocked legacy authentication protocols and configured
+            location-based Conditional Access policies to reduce the attack
+            surface and help prevent unauthorized access attempts.
+        </p>
+    </div>
+
+    </div>
+    
+
+    <div class="safe-deployment-note">
+        
+    <h4>Report-only mode</h4>
+    <p>
+        Before enforcing each Conditional Access policy, I first deployed it using Microsoft's
+        Report-only mode. This allowed me to validate how policies would affect users without
+        actually blocking sign-ins, helping identify unintended lockouts before enabling enforcement.
+    </p>
+</div>
+
+
+
+
+</div>
     <div class="lab-gallery">
-      <img src="./conditional access/0.jpg" alt="Conditional Access Overview">
-      <img src="./conditional access/1.jpg" alt="MFA Policy">
-      <img src="./conditional access/2.jpg" alt="Session Control">
-      <img src="./conditional access/3.jpg" alt="Authentication Strength">
-      <img src="./conditional access/4.jpg" alt="Legacy Auth Block">
-      <img src="./conditional access/5.jpg" alt="Legacy Auth Block">
 
-      <img src="./conditional access/6.jpg" alt="Blocked high-risk sign-ins">
-      <img src="./conditional access/6.6.jpg" alt="Location Policy">
+        <img src="./conditional access/0.jpg">
+        <img src="./conditional access/1.jpg">
+        <img src="./conditional access/2.jpg">
+        <img src="./conditional access/3.jpg">
+        <img src="./conditional access/4.jpg">
+        <img src="./conditional access/5.jpg">
+        <img src="./conditional access/6.jpg">
+        <img src="./conditional access/6.6.jpg">
 
     </div>
 
-  </section>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- 
   <section class="project-section">
 
     <h2>Testing & Log Analysis</h2>
@@ -142,10 +310,10 @@
       <img src="./conditional access/9.jpg">
       <img src="./conditional access/9.9.jpg">
 
-    </div>
+    </div> -->
 
     <!-- <h2>Security Monitoring & Log Analysis</h2> -->
-
+<!-- 
     <p><strong>Sign-in Logs:</strong></p>
     <ul class="bullet-list">
       <li>Analyzed authentication success and failure events</li>
@@ -160,24 +328,140 @@
       <li>Confirmed policy deployment and enforcement</li>
     </ul>
 
-  </section>
+  </section> -->
 
 
 
-  <section class="project-section">
 
-    <h2>Key Takeaways</h2>
 
-    <ul class="bullet-list">
-      <li>Conditional Access enforces Zero Trust by continuously validating access decisions</li>
-      <li>Multiple Conditional Access policies can apply to a single user, with stricter controls taking priority</li>
-      <li>Privileged accounts require stronger authentication controls and tighter enforcement</li>
-      <li>Blocking legacy authentication significantly reduces the attack surface</li>
-      <li>Location-based restrictions help prevent unauthorized access attempts</li>
-      <li>Effective identity security requires both preventive controls and continuous monitoring</li>
-    </ul>
 
-  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="project-section">
+
+<h2>Testing & <span class="gold-text">Log Analysis</span></h2>
+
+    <div class="outcome-grid">
+
+        <div class="outcome-card">
+            <h3>MFA Enforcement</h3>
+            <p>Standard user Sofia was prompted for MFA under the "All Users" policy, with successful authentication confirmed in sign-in logs.</p>
+        </div>
+
+        <div class="outcome-card">
+            <h3>Policy Layering</h3>
+            <p>IT user Jordan had multiple Conditional Access policies applied simultaneously, including MFA and session controls.</p>
+        </div>
+
+        <div class="outcome-card">
+            <h3>Session Control</h3>
+            <p>Re-authentication was enforced every 3 hours based on configured sign-in frequency.</p>
+        </div>
+
+        <div class="outcome-card">
+            <h3>Privileged Access Protection</h3>
+            <p>Admin access was blocked when phishing-resistant MFA requirements were not met, preventing unauthorized elevation.</p>
+        </div>
+
+        <div class="outcome-card">
+            <h3>Geographic Restriction</h3>
+            <p>Sign-in attempts from locations outside the United States were blocked based on location-based policy.</p>
+        </div>
+
+    </div>
+
+    <div class="lab-gallery">
+        <img src="./conditional access/0.jpg">
+        <img src="./conditional access/7.jpg">
+        <img src="./conditional access/8.jpg">
+        <img src="./conditional access/9.jpg">
+        <img src="./conditional access/9.9.jpg">
+    </div>
+
+
+
+
+
+
+    <!-- <div class="ticket-two-column"> -->
+    <div class="outcome-grid">
+
+               <div class="outcome-card">
+
+            <h2><span class="gold-text">Sign-in</span> Logs</h2>
+            <ul class="bullet-list">
+                <li>Analyzed authentication success and failure events</li>
+                <li>Reviewed Conditional Access policies applied per login</li>
+                <li>Observed session token behavior and reduced MFA prompts</li>
+            </ul>
+        </div>
+
+               <div class="outcome-card">
+
+            <h2><span class="gold-text">Audit</span> Logs</h2>
+            <ul class="bullet-list">
+                <li>Tracked identity and access management changes</li>
+                <li>Verified administrative actions</li>
+                <li>Confirmed policy deployment and enforcement</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="project-section">
+    <h2>Key <span class="gold-text">Takeaway</span></h2>
+<ul class="takeaway-list">
+
+    <li>Designing Conditional Access around roles, not just individual users, made it possible to apply stronger controls to Jordan and Amelia without adding friction for Sofia's day-to-day access.</li>
+
+    <li>Testing policies in Report-only mode first showed me how they'd behave before enforcing them, which is the safer way to roll out access changes without risking an unintended lockout.</li>
+
+    <li>Privileged accounts need more than MFA. Requiring phishing-resistant authentication for Amelia's Global Administrator account reflects how much more damage a compromised admin account can do compared to a standard user.</li>
+
+    <li>Blocking legacy authentication closed off an entire category of attack that MFA alone wouldn't have caught, since older protocols don't support it.</li>
+
+    <li>Sign-in and audit logs gave me two different views of the same incident, authentication behavior on one side, administrative actions on the other, which together made the whole policy rollout traceable.</li>
+
+    <li>Zero Trust isn't a single setting, it's the result of several layered policies working together, each one closing a different gap the others didn't cover.</li>
+
+</ul>
+
+</section>
+
+
+
+
 
 
 
@@ -186,18 +470,17 @@
 
   <footer class="site-footer">
     <p>© 2026 TechSpace</p>
-    <p class="footer-sub">Cloud • Identity • Security Labs</p>
+    <p class="footer-sub">IT Support • Identity • Cloud Security</p>
     <p class="site-disclaimer">
-      Images used in this portfolio is for educational and demonstration purposes only.
-  </footer>
+        Images used in this portfolio are for educational and demonstration purposes only.
+    </p>
+</footer>
 
-  <div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-  </div>
 
-  <script src="./js/script.js"></script>
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
+    <script src="./js/script.js"></script>
 </body>
-
-</html>
