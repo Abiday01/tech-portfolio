@@ -2,110 +2,262 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>welcome to my tech space</title>
-  <link rel="stylesheet" href="./css/style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tech Space</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<header class="navbar">
 
-  <nav class="navbar">
-    <div class="nav-container">
+    <!-- <a href="index.html" class="logo">TechSpace</a> -->
+<a href="index.html" class="logo">
+Tech<span>Space</span>
+</a>
+    <nav>
 
-      <a href="index.html" class="logo">Tech Space</a>
+        <ul>
 
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="projects.html">projects</a></li>
-        <!-- <li><a href="contact.html">contact</a></li> -->
-      </ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="projects.html">Projects</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+<h1 class="home-title">
+Welcome to My <span class="gold-text">TechSpace</span>
+</h1>
+
+<p class="home-intro">
+
+Throughout this portfolio you'll find practical implementations of user onboarding,
+Role-Based Access Control, Conditional Access, Multi-Factor Authentication,
+Microsoft 365 Administration, Active Directory Management, ticket troubleshooting,
+and enterprise security concepts built around real-world enterprise environments.
+
+</p>
+
+<div class="button-container">
+
+<a href="projects.html" class="home-button">
+View All Projects
+</a>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<section class="latest-projects">
+
+<h2 class="section-title">
+    Latest <span class="gold-text">Projects</span>
+</h2>
+<div class="home-project-grid">
+
+
+<a href="enterprise-setup.html" class="home-project-card">
+
+<img src="./project cover/IT.png">
+
+<h3>Enterprise IT Support Environment</h3>
+
+</a>
+
+
+<a href="spiceworks.html" class="home-project-card">
+
+<img src="./project cover/tksys.png">
+
+<h3>Ticketing System</h3>
+
+</a>
+
+
+<a href="ad.html" class="home-project-card">
+
+<img src="./project cover/ad.png">
+
+<h3>Active Directory Lab</h3>
+
+</a>
+
+</div>
+
+</section> -->
+ 
+
+
+
+
+
+
+
+
+
+<section class="latest-projects">
+
+    <h2 class="section-title">
+        Latest <span class="gold-text">Projects</span>
+    </h2>
+
+    <div class="project-slider-viewport">
+        <div class="project-slider-track" id="projectTrack"></div>
+    </div>
+
+    <div class="slider-controls">
+
+        <button class="slider-arrow" id="prevProject">&#8249;</button>
+
+        <div class="slider-dots" id="projectDots"></div>
+
+        <button class="slider-arrow" id="nextProject">&#8250;</button>
 
     </div>
-  </nav>
+
+</section>
 
 
+<!-- technical skills -->
+<!-- <section class="skills-section">
 
-  <section class="home-hero">
+    <h2>Technical Skills</h2>
 
-    <h1 class="home-title">Welcome to My Tech Space</h1>
+   <div class="skills-grid">
 
-    <!-- <p class="home-intro">
-    <p class="home-intro">
-      I build hands-on labs focused on Identity & Access Management (IAM) and cloud security using Microsoft Entra ID,
-      Microsoft 365, and Active Directory. Each project is designed to reflect real-world enterprise environments,
-      covering areas such as role-based access control, conditional access, authentication security, and identity
-      monitoring.
+    <div class="skill-card">
+        <h3>IT Support & Ticketing</h3>
+        <p>
+            Spiceworks ITSM,
+        Ticket Lifecycle Management,
+        Troubleshooting,
+        Customer Service,
+        Documentation
+        </p>
+    </div>
 
-      <br>My focus is on developing practical skills in troubleshooting, access control design, and security operations
-      aligned with modern Zero Trust principles.
-    </p>
-    </p> -->
-    
- <p class="home-intro">
-    <p class="home-intro">
-      I build hands-on labs that simulate real-world enterprise IT environments using Microsoft Entra ID, Microsoft 365,
-      Active Directory and Ticketing System. My projects focus on identity and access management (IAM), IT support, cloud
-      administration and security fundamentals.
-<br>
+    <div class="skill-card">
+        <h3>Identity & Access Management</h3>
+        <p>
+            Microsoft Entra ID,
+            Role-Based Access Control (RBAC),
+            Conditional Access,
+            Multi-Factor Authentication (MFA),
+            Least Privilege
+        </p>
+    </div>
 
-      <br>Throughout this portfolio, you'll find practical implementations of user onboarding, role-based access control, Conditional Access, Multi-Factor Authentication, Microsoft 365 administration, Active Directory
-      management, ticket troubleshooting, and enterprise security concepts.
-<br>
-    </p>
-    </p>
-    
-    <a href="projects.html" class="home-button">View All Projects</a>
+    <div class="skill-card">
+        <h3>Microsoft 365 Administration</h3>
+        <p>
+            Microsoft 365 Admin Center,
+            Exchange Online,
+            Shared Mailboxes,
+            User Provisioning & Licensing
+        </p>
+    </div>
 
-  </section>
+    <div class="skill-card">
+        <h3>Windows Server & Active Directory</h3>
+        <p>
+            Active Directory Domain Services,
+            Organizational Units,
+            Group Policy (GPO),
+            DNS,
+        </p>
+    </div>
 
+    <div class="skill-card">
+        <h3>Cloud & Security</h3>
+        <p>
+            Zero Trust Principles,
+            Identity Protection,
+            Authentication Strength,
+            Security & Audit Logs
+        </p>
+    </div>
 
-  <section class="home-projects">
+</div>
 
-    <h2>Latest Projects</h2>
-
-    <div class="home-project-grid">
-
-        <a href="enterprise-setup.html" class="home-project-card">
-        <img src="./project cover/IT.png" alt="Enterprise IT Environment Deployment">
-        <h3>Enterprise IT Support Environment</h3>
-      </a>
-
-        <a href="spiceworks.html" class="home-project-card">
-        <img src="./project cover/tksys.png" alt="Ticketing">
-        <h3>Ticketing System</h3>
-      </a>
-      
-
-      <a href="ad.html" class="home-project-card">
-        <img src="./project cover/ad.png" alt="Active Directory">
-        <h3>Active Directory Lab</h3>
-      </a>
-
-      <!-- <a href="m365.html" class="home-project-card">
-        <img src="./project cover/rbac.png" alt="Microsoft Entra ID & Microsoft 365 Role-Based Access Control">
-        <h3>Entra ID & Microsoft 365 RBAC</h3>
-      </a> -->
-
-      <!-- <a href="mfa.html" class="home-project-card">
-        <img src="./mfa/img.png" alt="Multi-Factor Authentication (Entra ID)">
-        <h3>Multi-Factor Authentication (Entra ID)</h3>
-      </a> -->
+</section>
+ -->
 
 
+<!-- certs -->
+<!-- <section class="certifications-section">
+
+    <h2>Certifications</h2>
+
+    <div class="cert-grid">
+
+      <div class="cert-card">
+    <h3>Google IT Support</h3>
+    <span>Completed</span>
+</div>
+
+<div class="cert-card">
+    <h3>Microsoft SC-300</h3>
+    <span>In Progress</span>
+</div>
 
     </div>
 
-  </section>
+</section> -->
 
-  <footer class="site-footer">
+</main>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
     <p>© 2026 TechSpace</p>
-    <p class="footer-sub">Cloud • Identity • Security Labs</p>
+    <p class="footer-sub">IT Support • Identity • Cloud Security</p>
     <p class="site-disclaimer">
-      Images used in this portfolio is for educational and demonstration purposes only.
-  </footer>
-</body>
+        Images used in this portfolio are for educational and demonstration purposes only.
+    </p>
+</footer>
 
-</html>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
