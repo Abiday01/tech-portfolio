@@ -9,65 +9,254 @@
 </head>
 
 <body>
+  <section class="projects-page">
 
- <section class="projects-page">
-    <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="index.html" class="back-home">← Back to Home</a>
 
-    <h1 class="projects-title">Projects</h1>
+    <h1 class="projects-title"> <span class="gold-text">Projects</span></h1>
+
     <p class="projects-subtitle">
-      A collection of hands-on labs and technical implementations.
+      Hands-on labs focused on IT Support, Microsoft Entra ID, Microsoft 365,
+      Active Directory, Identity & Access Management, and enterprise security.
     </p>
 
     <div class="projects-grid">
 
-      <!-- <a href="enterprise-setup.html" class="project-card">
-    <img src="./project cover/IT.png">
-    <h3>Enterprise IT Environment Deployment</h3>
-</a> -->
+      <!-- Enterprise IT Support Environment -->
+      <a href="enterprise-setup.html" class="project-card">
+
+        <img src="./project cover/IT.png" alt="Enterprise IT Support Environment">
+
+        <div class="project-content">
+
+          <h3>Enterprise IT Support Environment</h3>
+
+          <p>
+            <!-- Built a simulated enterprise environment using Microsoft 365,
+            Microsoft Entra ID, licensing, shared mailboxes, user provisioning,
+            and Spiceworks ITSM. -->
+
+            Simulated the IT department of a fictional healthcare company from onboarding employees to diagnosing and
+            resolving a real support ticket.
 
 
-  <a href="enterprise-setup.html" class="project-card">
-    <img src="./project cover/IT.png">
-  <h3>Enterprise IT Support Environment</h3>
-</a>
 
-      
-       <a href="spiceworks.html" class="project-card">
-        <img src="./project cover/tksys.png" alt="Ticketing">
-        <h3>Ticketing System</h3>
+
+          </p>
+
+          <div class="project-tags">
+
+            <span>Microsoft 365</span>
+
+            <span>Entra ID</span>
+
+            <span>Spiceworks</span>
+
+            <span>IT Support</span>
+
+            <!-- <span>Identity</span> -->
+
+          </div>
+
+        </div>
+
       </a>
 
+      <!-- Active Directory -->
 
       <a href="ad.html" class="project-card">
+
         <img src="./project cover/ad.png" alt="Active Directory">
-        <h3>Active Directory</h3>
+
+        <div class="project-content">
+          <h3>Active Directory</h3>
+
+
+          <p>
+            Built and managed an enterprise Active Directory environment including users,
+            Organizational Units, Group Policy, DNS, and DHCP.
+          </p>
+
+          <div class="project-tags">
+            <span>Windows Server</span>
+            <span>Active Directory</span>
+            <span>DNS</span>
+            <span>DHCP</span>
+            <span>Group Policy</span>
+          </div>
+
+        </div>
+
       </a>
+
+      <!-- Entra ID -->
 
       <a href="m365.html" class="project-card">
-        <img src="./project cover/rbac.png">
-        <h3>Entra ID & Microsoft 365 RBAC</h3>
+
+        <img src="./project cover/rbac.png" alt="Microsoft Entra ID">
+
+        <div class="project-content">
+
+          <h3>Identity & Access Management</h3>
+
+
+          <p>
+            <!-- Configured administrative roles, custom RBAC permissions,
+            and Microsoft 365 access management following least privilege principles. -->
+
+
+            A locked-out user, a helpdesk reset, and a full audit trail — this lab shows role-based access control and
+            least privilege in action across a simulated identity environment.
+
+
+          </p>
+
+          <div class="project-tags">
+            <span>Entra ID</span>
+            <!-- <span>Microsoft 365</span> -->
+            <span>RBAC</span>
+            <!-- <span>Azure Portal</span> -->
+            <!-- <span>Identity</span> -->
+            <span>Least Privilege</span>
+            <span>Audit Logs</span>
+          </div>
+
+        </div>
+
       </a>
 
-         <a href="conditional-access.html" class="project-card">
-  <img src="./project cover/conditional.png">
-  <h3>Conditional Access</h3>
-</a> 
+      <!-- Conditional Access -->
 
+      <a href="conditional-access.html" class="project-card">
+
+        <img src="./project cover/conditional.png" alt="Conditional Access">
+
+        <div class="project-content">
+
+          <h3>Conditional Access</h3>
+
+          <p>
+            Implemented Conditional Access policies to secure enterprise resources
+            using risk-based authentication and location controls.
+          </p>
+
+          <div class="project-tags">
+            <span>Conditional Access</span>
+            <span>Entra ID</span>
+            <span>MFA</span>
+            <span>Azure</span>
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- MFA -->
 
       <a href="mfa.html" class="project-card">
-        <img src="./project cover/mfa.png">
-        <h3>Multi-Factor Authentication (Entra ID)</h3>
+
+        <img src="./project cover/mfa.png" alt="MFA">
+
+        <div class="project-content">
+
+          <h3>Multi-Factor Authentication</h3>
+
+          <p>
+            Configured Microsoft Entra ID Multi-Factor Authentication to strengthen
+            account security and reduce unauthorized access.
+          </p>
+
+          <div class="project-tags">
+            <span>MFA</span>
+            <span>Authentication</span>
+            <span>Entra ID</span>
+            <span>Security</span>
+          </div>
+
+        </div>
+
       </a>
 
+      <!-- Ticketing -->
 
       <a href="ticketing.html" class="project-card">
+
         <img src="./project cover/customerservices.png" alt="Ticketing">
-        <h3>Ticketing & Call Handling</h3>
+
+        <div class="project-content">
+
+          <h3>Ticketing & Call Handling</h3>
+
+          <p>
+            Simulated an enterprise help desk environment focused on
+            customer support, troubleshooting, and issue resolution.
+          </p>
+
+          <div class="project-tags">
+            <span>Customer Service</span>
+            <span>IT Support</span>
+            <span>Troubleshooting</span>
+            <span>Ticketing</span>
+          </div>
+
+        </div>
+
       </a>
 
+      <!-- Operating Systems -->
+
       <a href="os.html" class="project-card">
+
         <img src="./photos/motherboard.png" alt="Operating Systems">
-        <h3>Operating Systems & Hardware</h3>
+
+        <div class="project-content">
+
+          <h3>Operating Systems & Hardware</h3>
+
+          <p>
+            Explored Windows operating systems, hardware components,
+            BIOS configuration, and enterprise troubleshooting.
+          </p>
+
+          <div class="project-tags">
+            <span>Windows 11</span>
+            <span>Windows Server</span>
+            <span>Hardware</span>
+            <span>BIOS</span>
+            <span>Networking</span>
+          </div>
+
+        </div>
+
+      </a>
+
+      <!-- Spiceworks -->
+
+      <a href="spiceworks.html" class="project-card">
+
+        <img src="./project cover/tksys.png" alt="Spiceworks">
+
+        <div class="project-content">
+
+          <h3>Ticketing System</h3>
+
+          <p>
+            A deep dive into the full IT ticketing lifecycle from submission to root cause to closure — walking
+            through a real Outlook access issue resolved start to finish in Spiceworks.
+
+
+          </p>
+
+          <div class="project-tags">
+
+            <span>Spiceworks ITSM</span>
+            <span>Ticketing Workflow</span>
+            <span>Root Cause Analysis</span>
+            <span>IT Service Desk</span>
+          </div>
+
+        </div>
+
       </a>
 
     </div>
@@ -75,14 +264,28 @@
   </section>
 
 
+
+
+
+
+
+
+
+
+
   <footer class="site-footer">
     <p>© 2026 TechSpace</p>
-    <p class="footer-sub">Cloud • Identity • Security Labs</p>
+    <p class="footer-sub">IT Support • Identity • Cloud Security</p>
     <p class="site-disclaimer">
-      Images used in this portfolio is for educational and demonstration purposes only.
+      Images used in this portfolio are for educational and demonstration purposes only.
+    </p>
   </footer>
-  
+
+
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
   <script src="./js/script.js"></script>
 </body>
-
-</html>
