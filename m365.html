@@ -13,17 +13,19 @@
 
 
   <nav class="navbar">
-    <div class="nav-container">
 
-      <a href="index.html" class="logo">TechSpace</a>
+    <a href="index.html" class="logo">TechSpace</a>
 
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="projects.html">projects</a></li>
-      </ul>
+    <button class="menu-toggle" id="menu-toggle">
+      ☰
+    </button>
 
-    </div>
+    <ul id="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="projects.html">projects</a></li>
+    </ul>
+
   </nav>
 
 
@@ -40,10 +42,6 @@
 
     </h1>
     <p class="project-intro">
-      <!-- While exploring the Microsoft 365 Admin Center, I discovered the Security Reader role, which led me to build a
-      hands-on lab in Microsoft Entra ID. This project demonstrates how role-based access control (RBAC), least
-      privilege, and monitoring work together in a real-world identity environment. -->
-
 
       While exploring the Microsoft 365 Admin Center, I came across the Security Reader role, which got me curious about
       how access control actually works behind the scenes. That curiosity turned into this hands-on lab in Microsoft
@@ -51,7 +49,6 @@
       and activity monitoring work together to keep an identity environment secure, and what happens when something as
       simple as a forgotten password needs to be resolved without over-granting access.
     </p>
-    <!-- <h3 class="stack-title">Technologies & Skills Demonstrated</h3> -->
 
     <div class="tech-stack">
 
@@ -76,17 +73,14 @@
   <section class="project-section">
 
     <h2><span class="gold-text">Role Design</span> & Setup</h2>
-    <p>
-      I created four users with defined responsibilities to simulate a real IT environment. Each role was assigned only
-      the permissions required to perform their job, no more, no less. Jordan, the Helpdesk Technician, can reset
-      passwords, but can't create new roles or touch security policies. Amelia, the Security Analyst, can view sign-in
-      and audit logs, but can't modify user accounts.<br> This is least privilege in practice: giving each person
-      exactly
-      enough access to do their job, and nothing that would let a single compromised or careless account put the whole
-      environment at risk.
+    <p>I started by creating all the users through the Microsoft 365 Admin Center, requiring them to set a password
+      when they first log in.</p>
+    <div class="lab-gallery">
+      <img src="./EntraID photo/1.jpg">
+      <img src="./EntraID photo/1.1.jpg">
+    </div>
 
 
-    </p>
 
     <div class="role-grid">
 
@@ -110,43 +104,41 @@
         <p>Standard account with limited access.</p>
       </div>
 
-    </div>
 
-    <div class="lab-gallery">
-      <img src="./EntraID photo/1.jpg">
-      <img src="./EntraID photo/1.1.jpg">
     </div>
-    <p>I started by creating all the users through the Microsoft 365 Admin Center, requiring them to set a password
-      when they first log in.</p>
+    <p>
+      I created four users with defined responsibilities to simulate a real IT environment. Each role was assigned only
+      the permissions required to perform their job, no more, no less. Jordan, the Helpdesk Technician, can reset
+      passwords, but can't create new roles or touch security policies. Amelia, the Security Analyst, can view sign-in
+      and audit logs, but can't modify user accounts.<br> This is least privilege in practice: giving each person
+      exactly
+      enough access to do their job, and nothing that would let a single compromised or careless account put the whole
+      environment at risk.
+
+    </p>
 
   </section>
 
   <section class="project-section">
 
-    <h2><span class="gold-text">Least Privilege</span> in Practice</h2>
-    <p>
-      Each role was restricted to only the permissions required, reinforcing the principle of least privilege.
-    </p>
+    <h2><span class="gold-text">Dynamic Group</span> Membership</h2>
 
-    <ul class="bullet-list">
-      <li> Administrator (Admin) created all users, groups, and policies, set up the system, and managed all users.
-      </li>
-      <li>Helpdesk (Jordan) can reset passwords but cannot assign roles</li>
-      <li>Security Analyst (Amelia) can view logs but cannot modify users</li>
-      <li>End User (Sofia) can only access their own account</li>
-    </ul>
+ <p>
+    Through Entra ID, I created departmental groups using dynamic membership, automatically assigning users
+    based on their Department attribute rather than adding them manually. For example, anyone tagged with
+    the Security department is automatically included in the Security group, reducing the manual work of
+    managing group membership as the organization grows.
+</p>
 
+   <div class="lab-gallery gallery-four">
+    <img src="./EntraID photo/2.jpg">
+    <img src="./EntraID photo/3.jpg">
+    <img src="./EntraID photo/4.jpg">
+    <img src="./EntraID photo/5.jpg">
+</div>
+   
 
-    <div class="lab-gallery">
-      <img src="./EntraID photo/2.jpg">
-      <img src="./EntraID photo/3.jpg">
-      <img src="./EntraID photo/4.jpg">
-      <img src="./EntraID photo/5.jpg">
-    </div>
-    <p>
-      Through Entra ID, I created departmental groups using dynamic membership, allowing users to be automatically
-      assigned based on their departments.
-    </p>
+  
 
 
   </section>
@@ -353,7 +345,7 @@
 
       All actions were fully traceable. Every step, from Sofia's failed SSPR attempt to Jordan's reset, was recorded in
       the audit logs, giving Amelia full visibility into the incident from start to finish. After reviewing the trail,
-      she confirmed there was no suspicious activity involved, just a routine credentials issue, and closed out the
+      she confirmed there was no suspicious activity involved, just credentials issue, and closed out the
       security side of the incident.
 
 
@@ -371,62 +363,44 @@
 
     <h2>Key <span class="gold-text">Takeaway</span></h2>
 
-    <!-- <p>
-      This project demonstrated how role separation and least privilege work together
-      with logging and monitoring in a real-world identity system.
-    </p>
-
-    <p>
-      Even a simple login issue can be tracked end-to-end, allowing administrators
-      and security analysts to validate actions, understand user behavior,
-      and maintain security visibility.
-    </p>
-
-    <p>
-      In the next phase, I will enhance this environment by implementing Conditional Access
-      policies and Multi-Factor Authentication (MFA).
-    </p> -->
 
     <ul class="bullet-list">
 
-    <li>Designed four distinct roles (Admin, Helpdesk, Security Analyst, End User) using the principle of least privilege, ensuring no one had more access than their job required.</li>
+      <li>Designed four distinct roles (Admin, Helpdesk, Security Analyst, End User) using the principle of least
+        privilege, ensuring no one had more access than their job required.</li>
 
-    <li>Simulated a real support incident, an end user locked out of her account, resolved through proper identity verification rather than assumptions.</li>
+      <li>Simulated a real support incident, an end user locked out of her account, resolved through proper identity
+        verification rather than assumptions.</li>
 
-    <li>Used sign-in and audit logs to confirm the root cause was a credentials issue, not a system failure, and to fully trace every action taken during the incident.</li>
+      <li>Used sign-in and audit logs to confirm the root cause was a credentials issue, not a system failure, and to
+        fully trace every action taken during the incident.</li>
 
-    <li>Applied the Security Reader role to give the Security Analyst read-only visibility into logs, without any ability to modify users or settings.</li>
+      <li>Applied the Security Reader role to give the Security Analyst read-only visibility into logs, without any
+        ability to modify users or settings.</li>
 
-    <li>Identified a current gap: sign-ins aren't yet protected by Conditional Access, so risky login patterns are only caught after the fact rather than blocked in real time.</li>
+      <li>Next phase: implement Conditional Access policies and Multi-Factor Authentication (MFA) to catch and stop
+        risky sign-in attempts as they happen.</li>
 
-    <li>Next phase: implement Conditional Access policies and Multi-Factor Authentication (MFA) to catch and stop risky sign-in attempts as they happen.</li>
-
-</ul>
+    </ul>
 
   </section>
 
 
 
 
-
-
-
-
-
-
-   <footer class="site-footer">
+  <footer class="site-footer">
     <p>© 2026 TechSpace</p>
     <p class="footer-sub">IT Support • Identity • Cloud Security</p>
     <p class="site-disclaimer">
-        Images used in this portfolio are for educational and demonstration purposes only.
+      Images used in this portfolio are for educational and demonstration purposes only.
     </p>
-</footer>
+  </footer>
 
 
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
 
-    <script src="./js/script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
