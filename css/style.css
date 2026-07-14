@@ -1,4 +1,3 @@
-
 :root{
 
     --bg:#07090d;
@@ -18,10 +17,6 @@
 
 }
 
-
-/* ===========================
-   GLOBAL
-=========================== */
 
 *{
 
@@ -1045,41 +1040,8 @@ footer{
                     Button
 =================================================*/
 
-/* .button-wrapper{
 
-    text-align:center;
 
-    margin-top:35px;
-
-}
-
-.project-btn{
-
-    display:inline-block;
-
-    padding:14px 28px;
-
-    background:#eeb32b;
-
-    color:#111;
-
-    text-decoration:none;
-
-    border-radius:40px;
-
-    font-weight:700;
-
-    transition:.3s;
-
-}
-
-.project-btn:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:0 8px 22px rgba(238,179,43,.18);
-
-}  */
 
 
 .project-btn{
@@ -1786,43 +1748,6 @@ code{
 
 
 
-
-/* 
-
-
-.takeaway-list{
-
-    list-style:none;
-    margin:20px 0 0;
-    padding:0;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-
-}
-
-.takeaway-list li{
-
-    padding:16px 20px;
-    background:#171320;
-    border:1px solid #2b2636;
-    border-left:3px solid #eeb32b;
-    border-radius:12px;
-    color:#d6d2df;
-    font-size:.95rem;
-    line-height:1.7;
-    transition:.25s;
-
-}
-
-.takeaway-list li:hover{
-
-    border-color:#eeb32b;
-    transform:translateX(4px);
-
-} */
-
-
 .takeaway-list{
 
     list-style:none;
@@ -2057,4 +1982,98 @@ code{
     color:var(--gold);
     transform:translateX(-3px);
 
+}
+
+
+.os-gallery img{
+
+    height:280px;
+
+    object-fit:cover;
+
+    object-position:top;
+
+}
+
+
+.gallery-four{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+@media(max-width:950px){
+
+    .gallery-four{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .gallery-four{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+
+
+
+/* Responsive fallback */
+/* @media (max-width: 900px) {
+  .gpo-simple {
+    grid-template-columns: 1fr;
+  }
+}  */
+
+
+/* Lightbox background */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Enlarged image */
+.lightbox-content {
+  display: block;
+  margin: auto;
+  max-width: 85%;
+  max-height: 80%;
+  border-radius: 6px;
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* Cursor pointer on thumbnails */
+.lab-gallery img {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.lab-gallery img:hover {
+  opacity: 0.85;
 }
