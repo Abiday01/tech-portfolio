@@ -10,8 +10,9 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,131 +20,76 @@
 
     <nav class="navbar">
 
-    <a href="index.html" class="logo">TechSpace</a>
+        <a href="index.html" class="logo">TechSpace</a>
 
-    <button class="menu-toggle" id="menu-toggle">
-        ☰
-    </button>
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        </button>
 
-    <ul id="nav-links">
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="projects.html">projects</a></li>
-    </ul>
+        <ul id="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="projects.html">projects</a></li>
+        </ul>
 
-</nav>
-
-
-<main>
-
-<section class="hero">
-
-<h1 class="home-title">
-Welcome to My <span class="gold-text">TechSpace</span>
-</h1>
-
-<p class="home-intro">
-
-Throughout this portfolio you'll find practical implementations of user onboarding,
-Role-Based Access Control, Conditional Access, Multi-Factor Authentication,
-Microsoft 365 Administration, Active Directory Management, ticket troubleshooting,
-and enterprise security concepts built around real-world enterprise environments.
-
-</p>
-
-<div class="button-container">
-
-<a href="projects.html" class="home-button">
-View All Projects
-</a>
-
-</div>
-
-</section>
+    </nav>
 
 
 
 
+    <main>
+
+        <section class="hero">
+
+            <h1 class="home-title">
+                Welcome to My <span class="gold-text">TechSpace</span>
+            </h1>
+
+            <p class="home-intro">
+
+                Throughout this portfolio you'll find hands-on IT support projects built around real-world enterprise
+                environments. These labs demonstrate user onboarding and offboarding, Microsoft 365 administration,
+                Active Directory management, ticket triage and troubleshooting, identity and access management,
+                Role-Based Access Control, Multi-Factor Authentication, Conditional Access, and enterprise
+                security practices using Microsoft technologies.
+            </p>
+
+            <div class="button-container">
+
+                <a href="projects.html" class="home-button">
+                    View All Projects
+                </a>
+
+            </div>
+
+        </section>
 
 
+        <section class="latest-projects">
+
+            <h2 class="section-title">
+                Latest <span class="gold-text">Projects</span>
+            </h2>
+
+            <div class="project-slider-viewport">
+                <div class="project-slider-track" id="projectTrack"></div>
+            </div>
+
+            <div class="slider-controls">
+
+                <button class="slider-arrow" id="prevProject">&#8249;</button>
+
+                <div class="slider-dots" id="projectDots"></div>
+
+                <button class="slider-arrow" id="nextProject">&#8250;</button>
+
+            </div>
+
+        </section>
 
 
-
-
-
-<!-- 
-<section class="latest-projects">
-
-<h2 class="section-title">
-    Latest <span class="gold-text">Projects</span>
-</h2>
-<div class="home-project-grid">
-
-
-<a href="enterprise-setup.html" class="home-project-card">
-
-<img src="./project cover/IT.png">
-
-<h3>Enterprise IT Support Environment</h3>
-
-</a>
-
-
-<a href="spiceworks.html" class="home-project-card">
-
-<img src="./project cover/tksys.png">
-
-<h3>Ticketing System</h3>
-
-</a>
-
-
-<a href="ad.html" class="home-project-card">
-
-<img src="./project cover/ad.png">
-
-<h3>Active Directory Lab</h3>
-
-</a>
-
-</div>
-
-</section> -->
- 
-
-
-
-
-
-
-
-
-
-<section class="latest-projects">
-
-    <h2 class="section-title">
-        Latest <span class="gold-text">Projects</span>
-    </h2>
-
-    <div class="project-slider-viewport">
-        <div class="project-slider-track" id="projectTrack"></div>
-    </div>
-
-    <div class="slider-controls">
-
-        <button class="slider-arrow" id="prevProject">&#8249;</button>
-
-        <div class="slider-dots" id="projectDots"></div>
-
-        <button class="slider-arrow" id="nextProject">&#8250;</button>
-
-    </div>
-
-</section>
-
-
-<!-- technical skills -->
-<!-- <section class="skills-section">
+        <!-- technical skills -->
+        <!-- <section class="skills-section">
 
     <h2>Technical Skills</h2>
 
@@ -207,8 +153,8 @@ View All Projects
  -->
 
 
-<!-- certs -->
-<!-- <section class="certifications-section">
+        <!-- certs -->
+        <!-- <section class="certifications-section">
 
     <h2>Certifications</h2>
 
@@ -228,25 +174,15 @@ View All Projects
 
 </section> -->
 
-</main>
+    </main>
 
-
-
-
-
-
-
-
-
-
-
-<footer class="site-footer">
-    <p>© 2026 TechSpace</p>
-    <p class="footer-sub">IT Support • Identity • Cloud Security</p>
-    <p class="site-disclaimer">
-        Images used in this portfolio are for educational and demonstration purposes only.
-    </p>
-</footer>
+    <footer class="site-footer">
+        <p>© 2026 TechSpace</p>
+        <p class="footer-sub">IT Support • Identity • Cloud Security</p>
+        <p class="site-disclaimer">
+            Images used in this portfolio are for educational and demonstration purposes only.
+        </p>
+    </footer>
 
 
     <div id="lightbox" class="lightbox">
