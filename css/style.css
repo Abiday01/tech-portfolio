@@ -2077,3 +2077,87 @@ code{
 .lab-gallery img:hover {
   opacity: 0.85;
 }
+
+
+
+
+/* mini tickets */
+.ticket-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:28px;
+    margin-top:35px;
+}
+
+.ticket-mini-card{
+    background:#171320;
+    border:1px solid #2b2636;
+    border-radius:16px;
+    padding:24px;
+    transition:.25s ease;
+}
+
+.ticket-mini-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold);
+}
+
+.ticket-number{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:30px;
+    background:rgba(233,185,73,.12);
+    color:var(--gold);
+    font-size:.8rem;
+    font-weight:600;
+    margin-bottom:14px;
+}
+
+.ticket-mini-card h3{
+    color:white;
+    font-size:1.2rem;
+    margin-bottom:18px;
+}
+
+.ticket-mini-card h4{
+    color:var(--gold);
+    font-size:.95rem;
+    margin:20px 0 10px;
+}
+
+.ticket-list{
+    margin-left:20px;
+}
+
+.ticket-list li{
+    color:#b8b4c6;
+    line-height:1.7;
+    margin-bottom:8px;
+}
+
+.ticket-solution{
+    margin-top:20px;
+    padding:16px;
+    border-radius:12px;
+    background:#111018;
+    border:1px solid #2b2636;
+}
+
+.ticket-solution strong{
+    color:var(--gold);
+    display:block;
+    margin-bottom:8px;
+}
+
+.ticket-solution p{
+    color:#b8b4c6;
+    line-height:1.7;
+}
+
+.note-label{
+
+    font-size:1.1rem;
+    font-weight:800;
+    color:#eeb32b;
+
+}
