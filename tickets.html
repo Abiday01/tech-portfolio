@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to my tech space</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">TechSpace</a>
+
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        </button>
+
+        <ul id="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="projects.html">projects</a></li>
+        </ul>
+
+    </nav>
+
+            <section class="project-container">
+
+
+    <h1 class="project-title">
+        Ticket <span class="gold-text">Library</span>
+    </h1>
+    <p class="project-intro">
+        A collection of common IT support issues and their possible root causes, from basic fixes to more
+        complex solutions.
+    </p>
+
+    <p class="project-intro">
+        <strong class="note-label gold-text">Note:</strong> To solve an issue, it's important to work through it
+        logically
+        rather than jumping straight to a solution or assumption. Each ticket follows a structured approach
+        similar to real help desk environments: <br>
+        Identify → Gather Information → Troubleshoot → Verify → Document. <br>
+        For a more in-depth look at how I approach a real ticket from start to finish, visit my
+        <a href="spiceworks.html"><strong><span class="gold-text">Ticketing System</span></strong></a> project.
+    </p>
+
+
+
+    <div class="tech-stack">
+
+        <span>Troubleshooting</span>
+        <span>Knowledge Base</span>
+        <span>IT Support</span>
+        <span>Root Cause Analysis</span>
+        <span>Windows 11</span>
+        <span>Microsoft 365</span>
+        <span>Active Directory</span>
+        <span>Microsoft Entra ID</span>
+        <span>Networking</span>
+        <span>Hardware</span>
+
+    </div>
+
+</section>
+
+
+    <section class="project-section">
+
+        <div class="ticket-grid">
+
+            <!-- Ticket 1 -->
+            <div class="ticket-mini-card">
+
+                <span class="ticket-number">Ticket #001</span>
+
+                <h3>Computer Running Slow</h3>
+
+                <h4>Basic Troubleshooting</h4>
+
+                <ul class="ticket-list">
+                    <li>Check CPU, Memory & Disk usage in Task Manager</li>
+                    <li>Disable unnecessary startup applications</li>
+                    <li>Close unused applications and browser tabs</li>
+                    <li>Free disk space and remove temporary files</li>
+                    <li>Install Windows updates</li>
+                    <li>Restart the computer</li>
+                </ul>
+
+                <div class="ticket-solution">
+                    <strong>Advanced Solution</strong>
+                    <p>
+                        If the device is still using an HDD, recommend upgrading to
+                        an SSD to significantly improve startup and application
+                        performance.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Ticket 2 -->
+            <div class="ticket-mini-card">
+
+                <span class="ticket-number">Ticket #002</span>
+
+                <h3>User Cannot Sign In</h3>
+
+                <h4>Basic Troubleshooting</h4>
+
+                <ul class="ticket-list">
+                    <li>Verify username and password</li>
+                    <li>Check Caps Lock and keyboard layout</li>
+                    <li>Confirm internet connectivity</li>
+                    <li>Reset the user's password</li>
+                    <li>Check if the account is locked</li>
+                    <li>Test sign-in on another device</li>
+                </ul>
+
+                <div class="ticket-solution">
+                    <strong>Advanced Solution</strong>
+                    <p>
+                        Verify Active Directory or Microsoft Entra ID account
+                        status, group membership, and authentication logs.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Ticket 3 -->
+            <div class="ticket-mini-card">
+
+                <span class="ticket-number">Ticket #003</span>
+
+                <h3>No Internet Connection</h3>
+
+                <h4>Basic Troubleshooting</h4>
+
+                <ul class="ticket-list">
+                    <li>Check Wi-Fi or Ethernet connection</li>
+                    <li>Test another website or device</li>
+                    <li>Restart the computer and router</li>
+                    <li>Disable/Enable the network adapter</li>
+                    <li>Run <code>ipconfig /release</code> and <code>ipconfig /renew</code></li>
+                    <li>Ping the default gateway to confirm local network connectivity</li>
+                    <li>Ping <code>8.8.8.8</code> (Google DNS) to test whether the connection reaches the internet, not
+                        just the local network</li>
+
+                </ul>
+
+                <div class="ticket-solution">
+                    <strong>Advanced Solution</strong>
+                    <p>
+                        If connectivity issues continue, review DNS configuration, network adapter drivers, and router
+                        settings.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="ticket-mini-card">
+
+                <span class="ticket-number">Ticket #004</span>
+
+                <h3>Application Crashes</h3>
+
+                <h4>Basic Troubleshooting</h4>
+
+                <ul class="ticket-list">
+                    <li>Restart the application and reopen it.</li>
+                    <li>Restart the computer.</li>
+                    <li>Check for application updates.</li>
+                    <li>Verify Windows is fully updated.</li>
+                    <li>Review Task Manager for excessive CPU or memory usage.</li>
+                    <li>Check Event Viewer for application error logs.</li>
+                </ul>
+
+                <div class="ticket-solution">
+                    <strong>Advanced Solution</strong>
+                    <p>
+                        Reinstall the application. If crashes continue,
+                        review compatibility issues, corrupted user profiles, or
+                        escalate with application logs for further investigation.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="ticket-mini-card">
+
+                <span class="ticket-number">Ticket #005</span>
+
+                <h3>Microsoft Teams Not Working</h3>
+
+                <h4>Basic Troubleshooting</h4>
+
+                <ul class="ticket-list">
+                    <li>Confirm the internet connection is working.</li>
+                    <li>Verify Microsoft 365 service status.</li>
+                    <li>Sign out and back into Teams.</li>
+                    <li>Restart the Teams application.</li>
+                    <li>Clear the Microsoft Teams cache.</li>
+                    <li>Verify the user's Microsoft 365 license is assigned.</li>
+                </ul>
+
+                <div class="ticket-solution">
+                    <strong>Advanced Solution</strong>
+                    <p>
+                        Reinstall Microsoft Teams, review Microsoft Entra ID sign-in
+                        logs, verify Conditional Access policies, and confirm the
+                        user's account is not blocked or missing required licenses.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="ticket-mini-card">
+
+                <span class="ticket-number">Ticket #006</span>
+
+                <h3>Password Reset</h3>
+
+                <h4>Basic Troubleshooting</h4>
+
+                <ul class="ticket-list">
+                    <li>Verify the user's identity.</li>
+                    <li>Confirm the username or email address.</li>
+                    <li>Check whether the account is locked.</li>
+                    <li>Reset the password through Microsoft Entra ID or Active Directory</li>
+                    <li>Require a password change at next sign-in.</li>
+                    <li>Confirm Multi-Factor Authentication is still working.</li>
+                </ul>
+
+
+            </div>
+
+            <div class="ticket-mini-card">
+
+                <span class="ticket-number">Ticket #007</span>
+
+                <h3>Computer Won't Turn On</h3>
+
+                <h4>Basic Troubleshooting</h4>
+
+                <ul class="ticket-list">
+                    <li>Press the power button</li>
+                    <li>Hold down the power button for a few seconds to force a restart</li>
+                    <li>Verify the power cable is working and the device is charged</li>
+                    <li>Confirm the power outlet works by testing another device</li>
+                    <li>Check for power indicator lights or fan activity</li>
+                    <li>Disconnect external devices and try powering on again</li>
+                </ul>
+
+                <div class="ticket-solution">
+                    <strong>Advanced Solution</strong>
+                    <p>
+                        Reseat the RAM and check all internal hardware connections first. Next, test the power supply
+                        (PSU)
+                        using a PSU tester or by swapping in a known-working unit. If the issue continues, try replacing
+                        the
+                        CMOS battery. If the computer still won't turn on after these steps, the motherboard may be
+                        failing,
+                        escalate for hardware replacement.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="ticket-mini-card">
+
+                <span class="ticket-number">Ticket #008</span>
+
+                <h3>Outlook Not Sending/Receiving Email</h3>
+
+                <h4>Basic Troubleshooting</h4>
+
+                <ul class="ticket-list">
+
+                    <li>Verify the internet connection</li>
+                    <li>Confirm Outlook is connected and not in Offline Mode</li>
+                    <li>Double-check the recipient's email address for typos</li>
+                    <li>Check if the attachment file is too large to send</li>
+                    <li>Restart Outlook and the computer</li>
+                    <li>Send a test email to verify the issue.</li>
+                    <li>Check mailbox storage limits in Microsoft 365 Admin Center </li>
+                </ul>
+
+                <div class="ticket-solution">
+                    <strong>Advanced Solution</strong>
+                    <p>
+                        Review the user's Microsoft 365 license, Exchange Online mailbox,
+                        Outlook profile, and Microsoft Entra ID sign-in logs. Escalate for further options if the issue
+                        continues, or recreate the Outlook profile if necessary.
+                    </p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+        <p>© 2026 TechSpace</p>
+        <p class="footer-sub">IT Support • Identity • Cloud Security</p>
+        <p class="site-disclaimer">
+            Images used in this portfolio are for educational and demonstration purposes only.
+        </p>
+    </footer>
+
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
