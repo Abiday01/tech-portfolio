@@ -30,14 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
  
     const latestProjects = [
     { img: "./project cover/IT.png", title: "Enterprise IT Support Environment", link: "enterprise-setup.html" },
-    { img: "./project cover/tksys.png", title: "Ticketing System", link: "spiceworks.html" },
-    { img: "./project cover/ad.png", title: "Active Directory Lab", link: "ad.html" },
-    { img: "./project cover/rbac.png", title: "Identity & Access Management", link: "m365.html" },
-    { img: "./project cover/conditional.png", title: "Conditional Access", link: "conditional-access.html" },
-    { img: "./project cover/mfa.png", title: "Multi-Factor Authentication", link: "mfa.html" },
-    { img: "./project cover/customerservices.png", title: "Ticketing & Call Handling", link: "ticketing.html" },
-    { img: "./photos/motherboard.png", title: "Operating Systems & Hardware", link: "os.html" }
-];
+        { img: "./project cover/tksys.png", title: "Ticketing System", link: "spiceworks.html" },
+        { img: "./project cover/kb.png", title: "Ticket Library", link: "tickets.html" },
+        { img: "./project cover/ad.png", title: "Active Directory Lab", link: "ad.html" },
+        { img: "./project cover/rbac.png", title: "Identity & Access Management", link: "m365.html" },
+        { img: "./project cover/conditional.png", title: "Conditional Access", link: "conditional-access.html" },
+        { img: "./project cover/mfa.png", title: "Multi-Factor Authentication", link: "mfa.html" },
+        // { img: "./project cover/customerservices.png", title: "Ticketing & Call Handling", link: "ticketing.html" },
+        { img: "./photos/motherboard.png", title: "Operating Systems & Hardware", link: "os.html" }
+    ];
     const track = document.getElementById('projectTrack');
     const dotsContainer = document.getElementById('projectDots');
     const prevBtn = document.getElementById('prevProject');
